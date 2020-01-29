@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+    {# mon jumbotron #}
+    <div class="jumbotron jumbotron-fluid bg-info m-0">
+        <div class="container">
+            <h1 class="display-4 text-white font-weight-light">Promotions sur tous les écrans</h1>
+            <p class="lead text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+        </div>
+    </div>
+    {# fin du jumbotron    #}
+
+
+        <div class="container bg-light py-5">
+            <div class="row">
+                {#          affichage de l'ensemble des categories #}
+                {% for categorie in categories %}
+                    <div class="col-md-3 col-6">
+                        <div class="card border my-2" style="width: 14rem;">
+                            <img src="{{ categorie.imageurl }}" class="card-img-top p-3" alt="{{ categorie.name }}">
+                            <div class="card-body p-1">
+                                <h3 class="card-title text-center font-weight-normal">{{ categorie.name }}</h3>
+                                <p class="card-text text-center px-3">{{ categorie.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
