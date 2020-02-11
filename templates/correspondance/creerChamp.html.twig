@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Réunion - Créer le champ{% endblock %}
+
+{% block banner %}
+    <div class="banner d-flex justify-content-center"><img class="w-100" src="{{ asset('build/images/banner_accueil.png') }}" alt="banniere accueil"></div>
+{% endblock %}
+
+{% block body %}
+{#    {% for label, messages in app.flashes %}#}
+{#        {% for message in messages %}#}
+{#            <div class="alert alert-success dismiss border border-success shadow-sm text-center"#}
+{#                 role="alert">#}
+{#                <h4 class="alert-heading text-success font-weight-light">C'est noté!</h4>#}
+{#                <h6 class="text-success font-weight-lighter">{{ message }}</h6>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    {% endfor %}#}
+
+    <div class="timeline-Box">
+        <img src="{{ asset("build/images/timeline_cc.0e1bec64.png") }}" alt="Fresque chronologique" class="timeline">
+    </div>
+
+    <div class="repere">
+        <div class="container" style="overflow: auto;">
+            <div class="row">
+                <div class="col d-flex justify-content-center">
+                    <h6>Après avoir sélectionné une sous-categorie (en
+                        blanc), ajoutez les exercices de votre choix</h6>
+                </div>
+            </div>
+    </div>
+
+
+    </div>
+
+
+
+{#    #}{# Affichage de la catégorie selectionnée #}
+{#    <div class="row align-arbre mt-0">#}
+{#        <img src="{{ asset("build/images/mains.png") }}" class="image-arbre" alt="Responsive image">#}
+{#        <div class="col d-flex justify-content-center float-none align-items-center p-0">#}
+{#            <div class="mb-3 grosRond d-flex align-items-center justify-content-center border border-light shadow">#}
+{#                <p>Créer <br> le champ</p>#}
+{#            </div>#}
+{#        </div>#}
+{#        <img src="{{ asset("build/images/fleur.png") }}" class="image-arbre" alt="Responsive image">#}
+{#    </div>#}
+
+{#    #}{# Affichage des cartes #}
+{#    <div class="row mt-2">#}
+{#        <div class="col d-flex justify-content-center mx-0">#}
+{#            {% for carte in cartes %}#}
+{#                <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe': groupe, 'carte': carte.0}) }}">#}
+{#                    <div class="btn btn-light mx-5 mt-3 petitRond font-weight-light d-flex justify-content-center align-items-center border border-light shadow titre-card">#}
+{#                        {{ carte.1|convert_encoding('UTF-8', 'ISO-8859-1') }}#}
+{#                    </div>#}
+{#                </a>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+
+{#    #}{# Affichage des exercices#}
+{#    <div class="row mt-2 border border-light">#}
+{#        <div class="col d-flex justify-content-rounded">#}
+{#            {% for exercice in exercices %}#}
+{#                <div class="card border border-light mx-3 py-1 shadow" style="width: 30vw;">#}
+{#                    <div class="card-body py-2">#}
+{#                        <div class="row">#}
+{#                            <div class="col text-center">#}
+{#                                <p class="card-title font-weight-light d-flex justify-content-center titre-card">{{ exercice.titre }}</p>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="row">#}
+{#                            <div class="col-6 float-left pl-5">#}
+{#                                <a href="https://jouer-collectif.com/contenu/{{ exercice.id }}" target="_blank"#}
+{#                                   class="btn btn-dark btn-sm my-0 p-1" style="width:6vw;">Visualiser</a>#}
+{#                            </div>#}
+{#                            <div class="col-6 float-right pr-5">#}
+{#                                <a href="{{ path('correspondance_CreerChamp', {'duree': duree, 'groupe':groupe, 'exo': exercice.id, 'catId': catSelectId}) }}"#}
+{#                                   class="btn btn-info btn-sm font-weight-light my-0 p-1 float-right"#}
+{#                                   style="width:6vw;">Ajouter</a>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="row mb-0">#}
+{#        <div class="col d-flex justify-content-end mt-3 w-25">#}
+{#            #}{#                        <a href="{{ path('correspondance_Engagement', {'duree': duree, 'groupe':groupe}) }}">#}
+{#            <img src="{{ asset("build/images/fleche_suivant.png") }}" class="my-0 suivant float-right"#}
+{#                 alt="Responsive image">#}
+{#            #}{#                        </a>#}
+{#        </div>#}
+{#    </div>#}
+
+{% endblock %}

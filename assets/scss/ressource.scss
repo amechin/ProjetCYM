@@ -1,0 +1,20 @@
+@import "vars";
+@import "mixins";
+
+.fleche_retour{
+  width: 15%;
+  height: 100%;
+}
+
+.card-ressource{
+  //background-image: url("../image/pa");
+  width: 275px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1{
+  font-family: "BebasNeue-Regular";
+}

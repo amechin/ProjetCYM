@@ -1,0 +1,24 @@
+@import "vars";
+@import "mixins";
+
+@font-face
+{
+  font-family: 'BebasNeue-Regular';
+  src: url('../typo/BebasNeue-Regular.otf');
+}
+
+@font-face
+{
+  font-family: 'Futura';
+  src: url('../typo/FuturaExtended.ttf');
+}
+
+.boutique{
+  color: $brown;
+  font-family: BebasNeue-Regular;
+}
+
+.image_boutique{
+  width: 40%;
+  height: 100%;
+}

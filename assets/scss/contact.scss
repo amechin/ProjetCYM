@@ -1,0 +1,38 @@
+@import "vars";
+@import "mixins";
+
+.form-group{
+  font-family: "FuturaExtended";
+  color: $brown;
+}
+
+.imagemail{
+  width: 80%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.mail{
+  font-family: "BebasNeue-Regular";
+  color: #412321;
+  margin-top: 20px;
+}
+
+.btn-info{
+  background: $blue;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #14d2d2;
+  border-color: #14d2d2;
+}

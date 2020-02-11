@@ -1,0 +1,219 @@
+@import "vars";
+@import "mixins";
+
+@font-face
+{
+  font-family: 'BebasNeue-Regular';
+  src: url('../typo/BebasNeue-Regular.otf');
+}
+
+@font-face
+{
+  font-family: 'Futura';
+  src: url('../typo/FuturaExtended.ttf');
+}
+
+*
+*::after
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $yellow;
+  position: relative;
+  box-sizing: border-box;
+}
+
+a {
+    color: $brown;
+}
+
+.ecranHaut {
+  height: 78vh;
+}
+
+.ecranBas {
+  height: 22vh;
+  background-color: $brown;
+  border-width: .2rem 0 0 0;
+  border-style: solid;
+  border-top-color: white;
+  padding-top: 3rem;
+  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+}
+
+.logo-box{
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+.logo{
+  width: 15rem;
+}
+
+//.page-titre {
+//  font-family: "BebasNeue-Regular";
+//  color: $brown;
+//  position: relative;
+//  width: 100%;
+//  height: 100%;
+//}
+
+.sous-titre {
+  font-family: BebasNeue-Regular;
+  color: #23ebeb;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-box {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+.banner {
+  width: 37rem;
+}
+
+}
+
+.menu-box{
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+}
+
+//@media only screen and (max-device-width:400px) and (min-device-width: 350px) {
+//    .logo {
+//      width: 30%;
+//      margin-top: -320px;
+//      margin-left: 200px;
+//    }
+//}
+//
+//@media only screen and (max-device-width:420px) and (min-device-width: 401px){
+//  .logo {
+//    width: 30%;
+//    margin-top: -320px;
+//    margin-left: 250px;
+//  }
+//}
+
+.button_nav:link,
+.button_nav:visited {
+  @include ring(3.5, $blue);
+  transition: all .2s ease-in-out;
+  z-index: 1;
+}
+
+.button_nav:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.5);
+}
+
+.button_nav:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+}
+
+.text-button{
+  color: $brown;
+  font-size: 1.9rem;
+  font-family: "BebasNeue-Regular";
+  height: 2.5rem;
+  background-color: $blue;
+  box-shadow: 0 10px 20px rgba(0,0,0,0);
+  transform: translate(-1rem, .2rem);
+  padding: 0 2rem;
+  border-radius: 0 2rem 2rem 0;
+  z-index: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+}
+
+footer{
+  background-color: $brown;
+
+}
+
+.separateur1{
+  border-bottom: 1px solid white;
+}
+
+.separateur2{
+  border-bottom: 1px solid white;
+}
+
+.footer-titre{
+  font-family: "BebasNeue-Regular";
+  color: $white;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+.anatomie{
+  text-align: center;
+  font-family: "BebasNeue-Regular";
+  color: $white;
+  font-size: 2rem;
+  letter-spacing: 1.6rem;
+}
+
+p{
+  margin: 0;
+  font-family: "Futura";
+  color: $white;
+}
+
+h3{
+  font-family: "BebasNeue-Regular";
+  color: $brown;
+}
+
+.ccb-box {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.ccby{
+  width: 15rem;
+}
+
+.logo-fb-box {
+  position: absolute;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+.logo-fb {
+  width: 4rem;
+}
+
+.text_footer{
+  text-align:justify;
+  font-size: 1.4rem;
+}
+
+.remerciement-box {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-remerciement{
+  text-align:center;
+  color: $white;
+  font-size: 1rem;
+}

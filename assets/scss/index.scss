@@ -1,0 +1,119 @@
+@import "vars";
+@import "mixins";
+
+.fleche-boutique-box{
+  position: absolute;
+  top:20rem;
+  left:20rem;
+}
+
+
+
+.fleche-boutique,
+.fleche-boutique:link,
+.fleche-boutique:visited {
+  width: 17rem;
+  transition: all .3s ease-in-out;
+}
+
+.fleche-boutique:hover{
+  transform: translateY(-10px);
+}
+
+.fleche-boutique:active {
+  transform: translateY(-1px);
+}
+
+
+
+
+
+
+
+.fleche-ressources-box{
+  position: absolute;
+  bottom:25rem;
+  left: 40rem;
+}
+
+.fleche-ressources,
+.fleche-ressources:link,
+.fleche-ressources:visited{
+  width: 17rem;
+  transition: all .3s ease-in-out;
+}
+
+.fleche-ressources:hover{
+  transform: translateY(-10px);
+}
+
+.fleche-ressources:active {
+  transform: translateY(-1px);
+}
+
+.panneau-box{
+  position: absolute;
+  top:45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.panneau{
+  width: 30rem;
+}
+
+.fleche-parti-box{
+  position: absolute;
+  top:20rem;
+  right:15rem;
+}
+
+.fleche-parti,
+.fleche-parti:link,
+.fleche-parti:visited{
+  width: 20rem;
+  animation: bounce-fleche-parti 4s ease-in-out infinite alternate-reverse;
+}
+
+.fleche-parti:hover{
+
+}
+
+.fleche-parti:active {
+  transform: translateY(-1px);
+}
+
+.fleche-ccm-box{
+  position: absolute;
+  bottom:25rem;
+  right: 40rem;
+}
+
+.fleche-ccm,
+.fleche-ccm:link,
+.fleche-ccm:visited{
+  width: 17rem;
+  transition: all .3s ease-in-out;
+}
+
+.fleche-ccm:hover{
+  transform: translateY(-10px);
+}
+
+.fleche-ccm:active {
+  transform: translateY(-1px);
+}
+
+@keyframes bounce-fleche-parti{
+
+  10% {
+    transform: translateY(-10px);
+    transform: scale(1.1,1.1);
+  }
+  20% {
+    transform: translateY(2px);
+  }
+  0%, 100% {
+    transform: translateY(0);
+  }
+}

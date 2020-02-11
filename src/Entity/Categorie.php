@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -19,55 +21,62 @@ class Categorie
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="categorie")
      */
-    private $description;
+    private $correspondances;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $imageurl;
+    public function __construct()
+    {
+        $this->correspondances = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getNom(): ?string
     {
-        return $this->name;
+        return $this->nom;
     }
 
-    public function setName(string $name): self
+    public function setNom(string $nom): self
     {
-        $this->name = $name;
+        $this->nom = $nom;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    /**
+     * @return Collection|Correspondance[]
+     */
+    public function getCorrespondances(): Collection
     {
-        return $this->description;
+        return $this->correspondances;
     }
 
-    public function setDescription(string $description): self
+    public function addCorrespondance(Correspondance $correspondance): self
     {
-        $this->description = $description;
+        if (!$this->correspondances->contains($correspondance)) {
+            $this->correspondances[] = $correspondance;
+            $correspondance->setCategorie($this);
+        }
 
         return $this;
     }
 
-    public function getImageurl(): ?string
+    public function removeCorrespondance(Correspondance $correspondance): self
     {
-        return $this->imageurl;
-    }
-
-    public function setImageurl(string $imageurl): self
-    {
-        $this->imageurl = $imageurl;
+        if ($this->correspondances->contains($correspondance)) {
+            $this->correspondances->removeElement($correspondance);
+            // set the owning side to null (unless already changed)
+            if ($correspondance->getCategorie() === $this) {
+                $correspondance->setCategorie(null);
+            }
+        }
 
         return $this;
     }
