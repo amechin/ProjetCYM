@@ -57,7 +57,6 @@ class CorrespondanceController extends AbstractController
 
         if ($request->query->get('exo') != null) {
             $session = $request->getSession();
-
             $exo = $request->query->get('exo');
             $cat = $request->query->get('catId');
             $titre = TitreExercices::unTitre($exo);
@@ -82,18 +81,19 @@ class CorrespondanceController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
 
-        $cartes = $em->getRepository(Correspondance::class)
-            ->findByCartes($duree, $groupe, $catSelectId);
+        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
         $cartes = SupprimerDoublons::unique($cartes);
 
-        $categories = $em->getRepository(Categorie::class)
-            ->findAll();
+        dump('affichage carte OK');
+        $categories = $em->getRepository(Categorie::class)->findAll();
 
         if (null != $carte) {
             $exercices = $em->getRepository(Correspondance::class)
                 ->findByExercices($duree, $groupe, $catSelectId, $carte);
             $dataExercices = TitreExercices::titreExercices($exercices);
+            dump($dataExercices);
         }
+        dump('affichage exercices OK');
 
         return $this->render('correspondance/creerChamp.html.twig',
         [

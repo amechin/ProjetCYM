@@ -24,7 +24,7 @@ class Carte
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="carte")
+     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="carte", orphanRemoval=true)
      */
     private $correspondances;
 
@@ -32,6 +32,7 @@ class Carte
     {
         $this->correspondances = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {

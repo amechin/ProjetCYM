@@ -24,7 +24,7 @@ class Duree
     private $duree;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="duree")
+     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="duree", orphanRemoval=true)
      */
     private $correspondances;
 
@@ -32,6 +32,7 @@ class Duree
     {
         $this->correspondances = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {

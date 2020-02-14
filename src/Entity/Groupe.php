@@ -24,7 +24,7 @@ class Groupe
     private $groupe;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="groupe")
+     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="groupe", orphanRemoval=true)
      */
     private $correspondances;
 

@@ -24,7 +24,7 @@ class Categorie
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="categorie")
+     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="categorie", orphanRemoval=true)
      */
     private $correspondances;
 

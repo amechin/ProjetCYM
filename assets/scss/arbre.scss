@@ -18,14 +18,20 @@
   right: 10rem;
 }
 
-.fleche-suivant{
-  background-image: url("../image/fleche_suivant.png");
-  width: 13rem;
-  height: 9rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.fleche-box-cc{
+  position: absolute;
+  top: 30rem;
+  right: 10rem;
 }
+
+.fleche-suivant{
+   background-image: url("../image/fleche_suivant.png");
+   width: 13rem;
+   height: 9rem;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
 
 .rondBoxGroupe{
   position: absolute;
@@ -89,13 +95,9 @@ input[type="radio"]{
   font-size: 12px;
 }
 
-.align-arbre{
-  text-align:center;
-}
 
 .image-arbre{
-  width:20%;
-  height:20%;
+
 }
 
 .image-arbre_engagement {
@@ -112,7 +114,17 @@ input[type="radio"]{
 
 .titre-card{
   color: $brown;
-  font-size: 12px;
+  font-size: 1.4rem;
+  margin: auto;
+}
+
+.titre-card-exercice {
+  background-color: $brown;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
 }
 
 .btn-dark{
@@ -121,19 +133,83 @@ input[type="radio"]{
 
 .timeline-Box{
   position: absolute;
-  top: 16rem;
-  left: 42rem;
+  top: 100rem;
+  left: 35rem;
 }
 
 .timeline{
   width: 70rem;
+  margin: auto;
 }
 
-.repere{
+.fresque-box{
   position: absolute;
-  top: 25rem;
+  top: $banner-box-top + 1*10rem;
 }
 
-.titreCc{
-  position: relative;
+.images-et-creer-champ-box{
+  position: absolute;
+  top: $banner-box-top + 2*10rem;
+}
+
+.consigne-box{
+  position: absolute;
+  top: $banner-box-top + 3.4*10rem;
+}
+
+.sous-categorie-box{
+  position: absolute;
+  top: $banner-box-top + 4*10rem;
+}
+
+.exercices-box{
+  position: absolute;
+  top: $banner-box-top + 4.8*10rem;
+}
+
+.images-gauche-arbre{
+  width: 15rem;
+  float: left;
+}
+
+.images-droite-arbre{
+  width: 15rem;
+  align-content: flex-end;
+}
+
+.texte-arbre{
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: $brown;
+  background-color: white;
+  padding: 3rem 3rem;
+  border-radius: 50%;
+  border: .5px solid $brown;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+}
+
+.texte-sous-categorie{
+  font-size: 1.4rem;
+  background-color: $brown;
+  color: white;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  width: 15rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  transition: all .3s ease-in-out;
+}
+
+.texte-sous-categorie:hover{
+  transform: translateY(-5px);
+}
+
+.exercices{
+  border-radius: 1rem;
+  border: 1px solid $brown;
+  box-shadow: 0 3px 6px rgba(0,0,0,.5);
+}
+
+.consigne{
+  font-size: 1.6rem;
+  color: $brown;
 }

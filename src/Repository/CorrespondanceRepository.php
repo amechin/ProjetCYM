@@ -43,7 +43,7 @@ class CorrespondanceRepository extends ServiceEntityRepository
     public function findByExercices($duree, $groupe, $categorie, $carte)
     {
         return $this->createQueryBuilder('c')
-            ->Select('c.exercice_id')
+            ->Select('c.exerciceId')
             ->andWhere('c.categorie = :cat')
             ->andWhere('c.duree = :duree')
             ->andWhere('c.groupe = :groupe')
@@ -60,7 +60,7 @@ class CorrespondanceRepository extends ServiceEntityRepository
     public function findAllCorrespondance()
     {
         return $this->createQueryBuilder('c')
-            ->Select('d.duree, g.groupe, cg.nom, ct.carte, c.exercice_id')
+            ->Select('d.duree, g.groupe, cg.nom, ct.carte, c.exerciceId')
             ->join(Duree::class, 'd', 'WITH', 'c.duree = d.id')
             ->Join(Groupe::class, 'g', 'WITH', 'c.groupe = g.id')
             ->Join(Categorie::class, 'cg', 'WITH', 'c.categorie = cg.id')

@@ -13,6 +13,8 @@
   src: url('../typo/FuturaExtended.ttf');
 }
 
+
+
 *
 *::after
 *::before {
@@ -77,15 +79,20 @@ a {
 
 .banner-box {
   position: absolute;
-  top: 8rem;
+  top: $banner-box-top;
   left: 50%;
   transform: translate(-50%, -50%);
-
-.banner {
-  width: 37rem;
 }
 
+.banner{
+  width: 40rem;
 }
+
+.banner-sm{
+  width: 30rem;
+}
+
+
 
 .menu-box{
   position: absolute;
@@ -113,6 +120,7 @@ a {
 .button_nav:visited {
   @include ring(3.5, $blue);
   transition: all .2s ease-in-out;
+  box-shadow: 0 5px 4px rgba(0,0,0,.5);
   z-index: 1;
 }
 

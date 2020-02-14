@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="" />
+    <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/composer.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/652a6980-f507-4dca-9df2-72b09fe465c8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/652a6980-f507-4dca-9df2-72b09fe465c8/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/acbd3d19-67c2-4315-8c9f-fd591dbba169.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ad8c45-f30e-4214-a805-cef5e401b779.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d4ad8c45-f30e-4214-a805-cef5e401b779/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/_vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Carte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Correspondance.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Duree.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Duree.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Person.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produits.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191226063754.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191227141939.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191227153856.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200130144536.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200130145653.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200206135518.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200206135713.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200206140832.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/CorrespondanceRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/PersonRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/ProduitsRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correspondance/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correspondance/creerChamp.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/correspondance/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correspondance/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,8 +80,22 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cym.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="correspondance: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="RepoCYM" />
+    <favorites_list name="comment" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -158,26 +212,32 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1WyhPU8WxdgNuyc80agmTyvF3a6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/correspondance" />
+    <property name="database.data.extractors.current.id" value="SQL Inserts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\templates\correspondance" />
       <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\src" />
       <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\assets\image" />
-      <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\public\build\images" />
-      <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -195,7 +255,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@19653829" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -225,25 +295,38 @@
       <workItem from="1581001208929" duration="1955000" />
       <workItem from="1581278405025" duration="11000" />
       <workItem from="1581279002300" duration="4446000" />
+      <workItem from="1581606094625" duration="501000" />
+      <workItem from="1581606624417" duration="1300000" />
+      <workItem from="1581608832069" duration="15344000" />
+      <workItem from="1581673204549" duration="8320000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="496" y="102" key="#CorrespondanceController.php" timestamp="1580986719110">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="465" y="124" key="#CorrespondanceController.php" timestamp="1581667994654">
+      <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="496" y="102" key="#CorrespondanceController.php/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580986719110" />
+    <state x="465" y="124" key="#CorrespondanceController.php/0.23.1440.819@0.23.1440.819" timestamp="1581667994654" />
     <state x="2472" y="178" key="#Inspections" timestamp="1580129600085">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2472" y="178" key="#Inspections/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580129600085" />
-    <state x="361" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580395622013">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="432" y="23" width="649" height="819" key="#PHP" timestamp="1581667993105">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="432" y="23" width="649" height="819" key="#PHP/0.23.1440.819@0.23.1440.819" timestamp="1581667993105" />
+    <state x="338" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581680848085">
+      <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="361" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580395622013" />
+    <state x="338" y="95" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.819@0.23.1440.819" timestamp="1581680848085" />
     <state x="2604" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580131146656">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -252,26 +335,61 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2560" y="255" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580132997488" />
-    <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580998546188">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581611216368">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.819@0.23.1440.819" timestamp="1581611216368" />
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1581612912264">
+      <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580998546188" />
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1581612912264" />
     <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1580395616937">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580395616937" />
     <state x="2660" y="274" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580132616944" />
     <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1580321991063" />
-    <state x="277" y="56" key="SettingsEditor" timestamp="1580289942299">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom" timestamp="1581606209628">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.23.1440.819@0.23.1440.819" timestamp="1581606209628" />
+    <state width="1398" height="211" key="GridCell.Tab.0.center" timestamp="1581606209628">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.center/0.23.1440.819@0.23.1440.819" timestamp="1581606209628" />
+    <state width="1398" height="211" key="GridCell.Tab.0.left" timestamp="1581606209627">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.left/0.23.1440.819@0.23.1440.819" timestamp="1581606209627" />
+    <state width="1398" height="211" key="GridCell.Tab.0.right" timestamp="1581606209628">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.right/0.23.1440.819@0.23.1440.819" timestamp="1581606209628" />
+    <state x="260" y="78" key="SettingsEditor" timestamp="1581624601221">
+      <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="277" y="56" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580289942299" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1580659946202">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="260" y="78" key="SettingsEditor/0.23.1440.819@0.23.1440.819" timestamp="1581624601221" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1581675641327">
+      <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state width="498" height="398" key="SwitcherDM/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580374692301" />
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580132536986" />
     <state width="498" height="398" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1580659946202" />
+    <state width="500" height="400" key="SwitcherDM/0.23.1440.819@0.23.1440.819" timestamp="1581675641327" />
+    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1581611766192">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.819@0.23.1440.819" timestamp="1581611766192" />
+    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1581609774277">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.819@0.23.1440.819" timestamp="1581609774277" />
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1581606629032">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog/0.23.1440.819@0.23.1440.819" timestamp="1581606629032" />
     <state x="686" y="20" width="611" height="804" key="find.popup" timestamp="1580998288679">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -281,5 +399,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="57" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580995620463" />
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1581627345398">
+      <screen x="0" y="23" width="1440" height="819" />
+    </state>
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1581627345398" />
   </component>
 </project>

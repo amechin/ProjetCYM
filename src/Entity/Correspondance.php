@@ -41,7 +41,7 @@ class Correspondance
     private $groupe;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $exerciceId;
 
@@ -50,48 +50,48 @@ class Correspondance
         return $this->id;
     }
 
-    public function getCategorie(): ?categorie
+    public function getCategorie(): ?Categorie
     {
         return $this->categorie;
     }
 
-    public function setCategorie(?categorie $categorie): self
+    public function setCategorie(?Categorie $categorie): self
     {
         $this->categorie = $categorie;
 
         return $this;
     }
 
-    public function getCarte(): ?carte
+    public function getCarte(): ?Carte
     {
         return $this->carte;
     }
 
-    public function setCarte(?carte $carte): self
+    public function setCarte(?Carte $carte): self
     {
         $this->carte = $carte;
 
         return $this;
     }
 
-    public function getDuree(): ?duree
+    public function getDuree(): ?Duree
     {
         return $this->duree;
     }
 
-    public function setDuree(?duree $duree): self
+    public function setDuree(?Duree $duree): self
     {
         $this->duree = $duree;
 
         return $this;
     }
 
-    public function getGroupe(): ?groupe
+    public function getGroupe(): ?Groupe
     {
         return $this->groupe;
     }
 
-    public function setGroupe(?groupe $groupe): self
+    public function setGroupe(?Groupe $groupe): self
     {
         $this->groupe = $groupe;
 
