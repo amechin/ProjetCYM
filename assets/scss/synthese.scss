@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixins";
+
+.mon-design-box{
+  position: absolute;
+  top: $banner-box-top + 1*10rem;
+}
+
+.cc-box{
+  position: absolute;
+  top: $banner-box-top + 1.3*10rem;
+}
+
+.cc-exercices-box{
+  position: absolute;
+  top: $banner-box-top + 2*10rem;
+}
+
+.exercices-synthese{
+   border-radius: 1rem;
+   border: 1px solid $brown;
+   box-shadow: 0 2px 4px rgba(0,0,0,.5);
+   height: 5rem;
+   font-size: 1.4rem;
+ }
+
+a {
+  text-decoration: none;
+}

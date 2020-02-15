@@ -55,7 +55,6 @@
         </div>
 
 
-
         {#        Affichage des sous-categories#}
         <div class="row sous-categorie-box">
             {% for carte in cartes %}
@@ -94,10 +93,9 @@
         </div>
 
         <div class="row fleche-box-cc">
-            {#                <a href="{{ path('correspondance_Engagement', {'duree': duree, 'groupe':groupe}) }}">#}
-            <img src="{{ asset("build/images/fleche_suivant.png") }}" class="my-0 fleche-suivant"
-                 alt="suivant">
-            {#                </a>#}
+            <a href="{{ path('reunion-synthese', {'duree': duree, 'groupe':groupe}) }}">
+                <img src="{{ asset("build/images/fleche_suivant.png") }}" class="my-0 fleche-suivant" alt="suivant">
+            </a>
         </div>
 
         {#        fin de mon container#}
