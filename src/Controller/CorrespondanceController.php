@@ -59,6 +59,7 @@ class CorrespondanceController extends AbstractController
             $session = $request->getSession();
             $exo = $request->query->get('exo');
             $cat = $request->query->get('catId');
+
             $titre = TitreExercices::unTitre($exo);
 
             $tab_temp = [
@@ -84,26 +85,38 @@ class CorrespondanceController extends AbstractController
         $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
         $cartes = SupprimerDoublons::unique($cartes);
 
-        dump('affichage carte OK');
         $categories = $em->getRepository(Categorie::class)->findAll();
 
         if (null != $carte) {
             $exercices = $em->getRepository(Correspondance::class)
                 ->findByExercices($duree, $groupe, $catSelectId, $carte);
             $dataExercices = TitreExercices::titreExercices($exercices);
-            dump($dataExercices);
         }
-        dump('affichage exercices OK');
 
         return $this->render('correspondance/creerChamp.html.twig',
         [
             'duree' => $duree,
             'groupe' => $groupe,
             'cartes' => $cartes,
+            'carte' => $carte,
             'categories' => $categories,
             'catSelect' => $catSelect,
             'catSelectId' => $catSelectId,
             'exercices' => $dataExercices
+        ]);
+    }
+
+    /**
+     * @Route("/synthese", name="reunion-synthese")
+     */
+    public function synthese(Request $request)
+    {
+        $session = $request->getSession();
+        $synthese = $session->get('synthese');
+
+        return $this->render('correspondance/synthese.html.twig',
+        [
+            'exercices' => $synthese,
         ]);
     }
 

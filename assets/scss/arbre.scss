@@ -95,11 +95,6 @@ input[type="radio"]{
   font-size: 12px;
 }
 
-
-.image-arbre{
-
-}
-
 .image-arbre_engagement {
   width:30%;
   height:30%;
@@ -145,6 +140,11 @@ input[type="radio"]{
 .fresque-box{
   position: absolute;
   top: $banner-box-top + 1*10rem;
+}
+
+.message-box{
+  position: absolute;
+  top: $banner-box-top + .6*10rem;
 }
 
 .images-et-creer-champ-box{
@@ -207,6 +207,7 @@ input[type="radio"]{
   border-radius: 1rem;
   border: 1px solid $brown;
   box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  min-width: 56rem !important;
 }
 
 .consigne{

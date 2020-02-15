@@ -12,9 +12,8 @@
         <div class="row message-box">
             {% for label, messages in app.flashes %}
                 {% for message in messages %}
-                    <div class="alert alert-success dismiss border border-success text-center"
-                         role="alert">
-                        <h4 class="alert-heading text-success">Exercice ajouté!</h4>
+                    <div class="alert alert-success text-center">
+                        <h4 class="alert-heading text-success">Ce Module a bien été ajouté à votre Design !</h4>
                         {#                        <h6 class="text-success">{{ message }}</h6>#}
                     </div>
                 {% endfor %}
@@ -44,13 +43,12 @@
         {#        affichage de la consigne#}
         <div class="row consigne-box">
             <div class="col d-flex justify-content-center">
-                <p class="consigne">Parcourez les sous-categories ci-dessous et ajoutez des exercices à votre Design</p>
+                <p class="consigne">Faîtes votre choix de module par sous-categorie</p>
             </div>
         </div>
 
         {#        Affichage des sous-categories#}
         <div class="row sous-categorie-box">
-            {% dump(cartes) %}
             {% for carte in cartes %}
                 <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe': groupe, 'carte': carte.0}) }}">
                     <div class="btn btn-outline-light texte-sous-categorie mx-4">
@@ -67,7 +65,7 @@
                     <div class="card exercices">
                         <div class="card-body">
                             <div class="row d-flex justify-content-center">
-                                <p class="card-title titre-card-exercice">Exercice</p>
+                                <p class="card-title titre-card-exercice">Module</p>
                             </div>
                             <div class="row d-flex justify-content-center">
                                 <p class="card-title titre-card text-center">{{ exercice.titre }}</p>
@@ -75,8 +73,10 @@
                             <div class="row d-flex justify-content-center mt-3">
                                 <a href="https://jouer-collectif.com/contenu/{{ exercice.id }}" target="_blank"
                                    class="btn btn-lg btn-outline-dark m-auto">Détail</a>
-                                <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe':groupe, 'exo': exercice.id, 'catId': catSelectId}) }}"
-                                   class="btn btn-lg btn-outline-success m-auto">Ajouter</a>
+                                {% if exercice is defined %}
+                                    <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe':groupe, 'carte': carte, 'exo': exercice.id, 'catId': catSelectId}) }}"
+                                       class="btn btn-lg btn-outline-success m-auto">Ajouter</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
