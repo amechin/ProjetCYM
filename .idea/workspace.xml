@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/synthese.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/arrow-black-bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/white-arrow-bottom.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/flash.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/correspondance/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correspondance/creerChamp.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -194,17 +193,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/correspondance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/image" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/image" />
       <recent name="$PROJECT_DIR$/templates/correspondance" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\templates\correspondance" />
-      <recent name="C:\Users\amechin\Documents\5. CookYourMeeting\2.SiteSymfony5\cymsymfony5\src" />
     </key>
   </component>
   <component name="RunManager">
@@ -266,7 +265,7 @@
       <workItem from="1581606624417" duration="1300000" />
       <workItem from="1581608832069" duration="15344000" />
       <workItem from="1581673204549" duration="8402000" />
-      <workItem from="1581691182176" duration="7135000" />
+      <workItem from="1581691182176" duration="8124000" />
     </task>
     <servers />
   </component>

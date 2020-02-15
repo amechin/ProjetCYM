@@ -157,6 +157,11 @@ input[type="radio"]{
   top: $banner-box-top + 3.4*10rem;
 }
 
+.fleche-bas-box{
+  position: absolute;
+  top: $banner-box-top + 3.6*10rem;
+}
+
 .sous-categorie-box{
   position: absolute;
   top: $banner-box-top + 4*10rem;
@@ -213,4 +218,16 @@ input[type="radio"]{
 .consigne{
   font-size: 1.6rem;
   color: $brown;
+}
+
+
+@keyframes down{
+  0% {position:relative; top:0px; opacity: 0}
+  100% {position:relative; top:10px; opacity: 1}
+
+}
+
+.fleche-bas{
+  animation: down 1s infinite ease-in-out alternate;
+  width: 15rem;
 }
