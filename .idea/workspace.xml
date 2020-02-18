@@ -2,44 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/test/swiftmailer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/DureeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/ContactFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/CorrespondanceFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/DureeFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/GroupeFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DataFixtures/RessourceFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Duree1Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/mail/design-sent.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/mail/notification-synthese.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/duree/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.local" beforeDir="false" afterPath="$PROJECT_DIR$/.env.local" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cymsymfony5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cymsymfony5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProjetFlashController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/DureeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DureeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/DureeRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/DureeRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/projet_flash/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin_index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_index/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,17 +228,12 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4f42150" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@770d1b2e" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
                 <item name="com.intellij.database.console.session.MessageBusSession@7095e09d" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@439f07e2" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -309,7 +272,7 @@
       <workItem from="1581691182176" duration="10864000" />
       <workItem from="1582017958927" duration="4195000" />
       <workItem from="1582022299752" duration="4299000" />
-      <workItem from="1582038766132" duration="2809000" />
+      <workItem from="1582038766132" duration="4306000" />
     </task>
     <servers />
   </component>

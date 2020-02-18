@@ -1,20 +1,69 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-arbre.html.twig' %}
 
-{% block title %}Hello AdminIndexController!{% endblock %}
+{% block title %}Cook Your Meeting{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col text-center">
+                <h6 class="font-weight-lighter text-dark">Cette page vous permet de modifier les informations de votre base de données</h6>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-sm font-weight-lighter table-striped table-borderless">
+                    <tbody>
+                    <tr>
+                        <td>Modification de la table <strong class="font-weight-bold text-uppercase">DURéE</strong></td>
+                        <td>
+                            <a href="{{ path('duree-index')}}">
+                                <button class="btn btn-sm btn-light btn-block border border-secondary">Cliquez ici</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modification de la table <strong class="font-weight-bold">PARTICIPANT</strong></td>
+                        <td>
+                            <a href="{{ path('groupe-index')}}">
+                                <button class="btn btn-sm btn-light btn-block border border-secondary">Cliquez ici</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modification de la table <strong class="font-weight-bold text-uppercase">CATégORIE</strong></td>
+                        <td>
+                            <a href="{{ path('categorie-index')}}">
+                                <button class="btn btn-sm btn-light btn-block border border-secondary">Cliquez ici</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modification de la table <strong class="font-weight-bold text-uppercase">SOUS-CATéGORIE</strong></td>
+                        <td>
+                            <a href="{{ path('scategorie-index')}}">
+                                <button class="btn btn-sm btn-light btn-block border border-secondary">Cliquez ici</button>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Modification de la table <strong class="font-weight-bold">CORRESPONDANCE</strong></td>
+                        <td>
+                            <a href="{{ path('admin-correspondance')}}">
+                                <button class="btn btn-sm btn-light btn-block border border-secondary">Cliquez ici</button>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/Users/adrienmechin/Documents/4.CYM/RepoCYM/src/Controller/AdminIndexController.php'|file_link(0) }}">src/Controller/AdminIndexController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Users/adrienmechin/Documents/4.CYM/RepoCYM/templates/admin_index/index.html.twig'|file_link(0) }}">templates/admin_index/index.html.twig</a></code></li>
-    </ul>
-</div>
 {% endblock %}
