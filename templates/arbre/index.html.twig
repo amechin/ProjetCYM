@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Paramètres Réunion{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner">
+{% endblock %}
+
+{% block body %}
+
+
+{#    <h6 class="font-weight-light text-dark">Commencez par choisir la durée de#}
+{#        votre intervention et le nombre de participant</h6>#}
+
+    <div class="img-gauche-box">
+        <img src="{{ asset("build/images/montre-equipe.png") }}" alt="Montre Equipe" class="img-gauche">
+    </div>
+
+
+    {{ form_start(form) }}
+    <div class="rondBoxDuree">
+        <div class="grosRond">
+            <p class="titre-correspondance">Durée</p>
+        </div>
+    </div>
+    <div class="formDureeBox">
+        {{ form_widget(form.duree, { 'attr': { 'class': 'form-check-inline radio-form'}}) }}
+    </div>
+
+    <div class="rondBoxGroupe">
+        <div class="grosRond">
+            <p class="titre-correspondance">Personnes</p>
+        </div>
+    </div>
+    <div class="formGroupeBox">
+        {{ form_widget(form.groupe, { 'attr': { 'class': 'form-check-inline radio-form'}}) }}
+    </div>
+
+    <div class="fleche-box">
+        <button type="submit" class="btn fleche-suivant"></button>
+    </div>
+    {{ form_end(form) }}
+
+{% endblock %}
+

@@ -2,147 +2,93 @@
 
 namespace App\Controller;
 
-use App\Entity\Categorie;
-use App\Entity\Contact;
 use App\Entity\Correspondance;
-use App\Form\ContactType;
-use App\Form\ParamType;
-use App\Service\SupprimerDoublons;
-use App\Service\TitreExercices;
+use App\Form\CorrespondanceType;
+use App\Repository\CorrespondanceRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
- * @Route("/reunion")
+ * @Route("/correspondance")
  */
 class CorrespondanceController extends AbstractController
 {
     /**
-     * @Route("/", name="reunion-parametres")
+     * @Route("/", name="correspondance_index", methods={"GET"})
      */
-    public function Parametres(SessionInterface $session, Request $request)
+    public function index(CorrespondanceRepository $correspondanceRepository): Response
     {
-        $session->set('cat', '');
-        $session->set('synthese', '');
+        return $this->render('correspondance/index.html.twig', [
+            'correspondances' => $correspondanceRepository->findAll(),
+        ]);
+    }
 
-        $form = $this->createForm(ParamType::class);
+    /**
+     * @Route("/new", name="correspondance_new", methods={"GET","POST"})
+     */
+    public function new(Request $request): Response
+    {
+        $correspondance = new Correspondance();
+        $form = $this->createForm(CorrespondanceType::class, $correspondance);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $data = $form->getData();
-            $duree = $data['duree'];
-            $groupe = $data['groupe'];
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($correspondance);
+            $entityManager->flush();
 
-            return $this->redirectToRoute('reunion-creer-champ', [
-                'duree' => $duree->getId(),
-                'groupe' => $groupe->getId()
-            ]);
+            return $this->redirectToRoute('correspondance_index');
         }
 
-        return $this->render('correspondance/index.html.twig', [
+        return $this->render('correspondance/new.html.twig', [
+            'correspondance' => $correspondance,
             'form' => $form->createView(),
         ]);
     }
 
+    /**
+     * @Route("/{id}", name="correspondance_show", methods={"GET"})
+     */
+    public function show(Correspondance $correspondance): Response
+    {
+        return $this->render('correspondance/show.html.twig', [
+            'correspondance' => $correspondance,
+        ]);
+    }
 
     /**
-     * @Route("/cc/{duree}/{groupe}/{carte}", name="reunion-creer-champ")
+     * @Route("/{id}/edit", name="correspondance_edit", methods={"GET","POST"})
      */
-    public function creerLeChamp(Request $request, int $duree, int $groupe, int $carte = null)
+    public function edit(Request $request, Correspondance $correspondance): Response
     {
-        $catSelect = "Créer le champ";
-        $catSelectId = 1;
-        $exercices = null;
-        $dataExercices = null;
+        $form = $this->createForm(CorrespondanceType::class, $correspondance);
+        $form->handleRequest($request);
 
-        if ($request->query->get('exo') != null) {
-            $session = $request->getSession();
-            $exo = $request->query->get('exo');
-            $cat = $request->query->get('catId');
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
 
-            $titre = TitreExercices::unTitre($exo);
-
-            $tab_temp = [
-                $cat => [
-                    $exo => $titre
-                ]
-            ];
-
-            $synthese = $session->get('synthese');
-            if (!is_array($synthese)) {
-                $synthese = [];
-            }
-
-            if (!in_array($synthese, $tab_temp)) {
-                array_push($synthese, $tab_temp);
-                $session->set('synthese', $synthese);
-                $this->addFlash('notice', 'Vous venez d\'ajouter un exercice, vous pouvez poursuivre votre Design');
-            }
+            return $this->redirectToRoute('correspondance_index');
         }
 
-        $em = $this->getDoctrine()->getManager();
+        return $this->render('correspondance/edit.html.twig', [
+            'correspondance' => $correspondance,
+            'form' => $form->createView(),
+        ]);
+    }
 
-        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
-        $cartes = SupprimerDoublons::unique($cartes);
-
-        $categories = $em->getRepository(Categorie::class)->findAll();
-
-        if (null != $carte) {
-            $exercices = $em->getRepository(Correspondance::class)
-                ->findByExercices($duree, $groupe, $catSelectId, $carte);
-            $dataExercices = TitreExercices::titreExercices($exercices);
+    /**
+     * @Route("/{id}", name="correspondance_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Correspondance $correspondance): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$correspondance->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($correspondance);
+            $entityManager->flush();
         }
 
-        return $this->render('correspondance/creerChamp.html.twig',
-            [
-                'duree' => $duree,
-                'groupe' => $groupe,
-                'cartes' => $cartes,
-                'carte' => $carte,
-                'categories' => $categories,
-                'catSelect' => $catSelect,
-                'catSelectId' => $catSelectId,
-                'exercices' => $dataExercices
-            ]);
+        return $this->redirectToRoute('correspondance_index');
     }
-
-    /**
-     * @Route("/synthese", name="reunion-synthese")
-     */
-    public function synthese(Request $request)
-    {
-        $session = $request->getSession();
-        $synthese = $session->get('synthese');
-
-        return $this->render('correspondance/synthese.html.twig',
-            [
-                'exercices' => $synthese,
-            ]);
-    }
-
-    /**
-     * @Route("/send", name="synthese-send", methods={"GET","POST"})
-     */
-    public function mail(Request $request, \Swift_Mailer $mailer)
-    {
-        $session = $request->getSession();
-        $synthese = $session->get('synthese');
-
-        $message = (new \Swift_Message(
-            'Vous avez un nouveau message'))
-            ->setFrom('cook@labocollectif.fr')
-            ->setTo('cook@labocollectif.fr')
-            ->setBody($this->renderView(
-                'correspondance/mail/notification-synthese.html.twig',
-                [
-                    'exercices' => $synthese,
-                ]),
-                'text/html');;
-        $mailer->send($message);
-
-        return $this->render('correspondance/mail/design-sent.html.twig');
-    }
-
 }
