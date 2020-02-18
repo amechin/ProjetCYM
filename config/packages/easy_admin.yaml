@@ -1,0 +1,46 @@
+easy_admin:
+    site_name: 'Cook Your Meeting - Administration'
+    design:
+        brand_color: '#d6a400'
+        menu:
+            - { label: 'Gestion Arbre' }
+            - Duree
+            - Participant
+            - Categorie
+            - Sous_Categorie
+            - Parametrage_Arbre
+            - { label: 'Gestion Ressource'}
+            - Ressource
+            - { label: 'Gestion Comment ça Marche'}
+#            - Ressource
+            - { label: 'Gestion Email Admin'}
+            - Utilisateur
+
+    entities:
+        Duree:
+            class: App\Entity\Duree
+        Participant:
+            class: App\Entity\Groupe
+        Categorie:
+            class: App\Entity\Categorie
+        Sous_Categorie:
+            class: App\Entity\Carte
+        Parametrage_Arbre:
+            class: App\Entity\Correspondance
+            form:
+                fields:
+                    - { property: 'categorie', type: 'easyadmin_autocomplete' }
+                    - { property: 'duree', type: 'easyadmin_autocomplete' }
+                    - { property: 'carte', type: 'easyadmin_autocomplete' }
+                    - { property: 'groupe', type: 'easyadmin_autocomplete' }
+                    - { property: 'ExerciceId', type: 'text' }
+        Ressource:
+            class: App\Entity\Ressource
+#        Comment_Ca_Marche:
+#            class: App\Entity\Ccm
+        Utilisateur:
+            class: App\Entity\User
+
+
+
+

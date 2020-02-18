@@ -2,61 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CarteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CategorieController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/GroupeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/RessourceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CarteType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CategorieType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/CorrespondanceType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Groupe1Type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/RessourceType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/arbre/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/carte/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/categorie/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/correspondance/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/groupe/show.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/_delete_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/_form.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/edit.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/new.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CorrespondanceController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/routes/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cymsymfony5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cymsymfony5.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Carte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carte.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Duree.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Duree.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin_index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_index/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correspondance/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correspondance/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/correspondance/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correspondance/mail/design-sent.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/mail/design-sent.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correspondance/mail/notification-synthese.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/mail/notification-synthese.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/correspondance/synthese.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/synthese.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,6 +186,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WyhPU8WxdgNuyc80agmTyvF3a6" />
@@ -269,22 +234,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@770d1b2e" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7095e09d" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -321,7 +271,7 @@
       <workItem from="1581691182176" duration="10864000" />
       <workItem from="1582017958927" duration="4195000" />
       <workItem from="1582022299752" duration="4299000" />
-      <workItem from="1582038766132" duration="4727000" />
+      <workItem from="1582038766132" duration="10310000" />
     </task>
     <servers />
   </component>
