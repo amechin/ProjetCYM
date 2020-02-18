@@ -231,3 +231,25 @@ input[type="radio"]{
   animation: down 1s infinite ease-in-out alternate;
   width: 3.5rem;
 }
+
+
+//mail
+
+.image-mail-box{
+  position: absolute;
+  top: $banner-box-top + 1*10rem;
+}
+
+.message-mail-box{
+  position: absolute;
+  top: $banner-box-top + 3.8*10rem;
+}
+
+.button-mail-box{
+  position: absolute;
+  top: $banner-box-top + 4.6*10rem;
+}
+
+.image-mail{
+  width: 70rem;
+}

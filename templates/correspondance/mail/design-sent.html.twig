@@ -1,0 +1,22 @@
+{% extends 'base-arbre.html.twig' %}
+
+{% block title %}Design envoyé{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner">
+{% endblock %}
+
+{% block body %}
+    <div class="container d-flex justify-content-center">
+        <div class="row message-mail-box">
+            <h1 class="mail"> Votre Design à bien été envoyé sur votre mail</h1>
+        </div>
+        <div class="row image-mail-box">
+            <img class="image-mail" src="{{ asset('build/images/mail.6d791a66.png') }}" alt="image-sent-mail">
+        </div>
+        <div class="row button-mail-box">
+            <a href="{{ path('index') }}" class="btn btn-lg btn-outline-dark">Revenir à l'accueil</a>
+        </div>
+
+    </div>
+{% endblock %}

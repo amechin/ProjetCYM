@@ -22,19 +22,16 @@ class DureeRepository extends ServiceEntityRepository
     // /**
     //  * @return Duree[] Returns an array of Duree objects
     //  */
-    /*
-    public function findByExampleField($value)
+
+    public function findAllSortAsc()
     {
         return $this->createQueryBuilder('d')
-            ->andWhere('d.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('d.id', 'ASC')
-            ->setMaxResults(10)
+            ->orderBy('d.duree', 'ASC')
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+
 
     /*
     public function findOneBySomeField($value): ?Duree

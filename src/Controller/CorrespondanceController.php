@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Categorie;
+use App\Entity\Contact;
 use App\Entity\Correspondance;
+use App\Form\ContactType;
 use App\Form\ParamType;
 use App\Service\SupprimerDoublons;
 use App\Service\TitreExercices;
@@ -29,7 +31,7 @@ class CorrespondanceController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $data =$form->getData();
+            $data = $form->getData();
             $duree = $data['duree'];
             $groupe = $data['groupe'];
 
@@ -94,16 +96,16 @@ class CorrespondanceController extends AbstractController
         }
 
         return $this->render('correspondance/creerChamp.html.twig',
-        [
-            'duree' => $duree,
-            'groupe' => $groupe,
-            'cartes' => $cartes,
-            'carte' => $carte,
-            'categories' => $categories,
-            'catSelect' => $catSelect,
-            'catSelectId' => $catSelectId,
-            'exercices' => $dataExercices
-        ]);
+            [
+                'duree' => $duree,
+                'groupe' => $groupe,
+                'cartes' => $cartes,
+                'carte' => $carte,
+                'categories' => $categories,
+                'catSelect' => $catSelect,
+                'catSelectId' => $catSelectId,
+                'exercices' => $dataExercices
+            ]);
     }
 
     /**
@@ -115,9 +117,32 @@ class CorrespondanceController extends AbstractController
         $synthese = $session->get('synthese');
 
         return $this->render('correspondance/synthese.html.twig',
-        [
-            'exercices' => $synthese,
-        ]);
+            [
+                'exercices' => $synthese,
+            ]);
+    }
+
+    /**
+     * @Route("/send", name="synthese-send", methods={"GET","POST"})
+     */
+    public function mail(Request $request, \Swift_Mailer $mailer)
+    {
+        $session = $request->getSession();
+        $synthese = $session->get('synthese');
+
+        $message = (new \Swift_Message(
+            'Vous avez un nouveau message'))
+            ->setFrom('cook@labocollectif.fr')
+            ->setTo('cook@labocollectif.fr')
+            ->setBody($this->renderView(
+                'correspondance/mail/notification-synthese.html.twig',
+                [
+                    'exercices' => $synthese,
+                ]),
+                'text/html');;
+        $mailer->send($message);
+
+        return $this->render('correspondance/mail/design-sent.html.twig');
     }
 
 }
