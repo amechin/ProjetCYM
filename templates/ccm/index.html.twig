@@ -1,0 +1,36 @@
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
+
+{% block title %}Comment ça marche ?{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.fb93a565.png') }}" alt="banner" class="banner h-75">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        {% for article in articles %}
+            <div class="row">
+                <div class="col mt-4">
+                    <h3 class="ccm-titre">
+                        {{ article.titre }}
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="ccm-description">
+                        {{ article.description }}
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3 mb-4 d-flex justify-content-center">
+                    <img class="img-fluid ccm-image" src="/uploads/files/{{ article.ImageFilename }}" alt="{{ article.ImageFilename }}    ">
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block footerTitre %}{{ footer.Titre }}{% endblock %}
+{% block footerSousTitre %}{{ footer.Soustitre }}{% endblock %}
+{% block footerDescription%}{{ footer.Description }}{% endblock %}

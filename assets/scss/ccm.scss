@@ -1,0 +1,15 @@
+@import "vars";
+@import "mixins";
+
+.ccm-image{
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  border-radius: 1rem;
+}
+
+.ccm-titre{
+  font-size: 3rem;
+}
+
+.ccm-description{
+  font-size: 2rem;
+}

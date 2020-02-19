@@ -23,15 +23,15 @@ class Duree
      */
     private $duree;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="duree", orphanRemoval=true)
-     */
-    private $correspondances;
+//    /**
+//     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="duree", orphanRemoval=true)
+//     */
+//    private $correspondances;
 
-    public function __construct()
-    {
-        $this->correspondances = new ArrayCollection();
-    }
+//    public function __construct()
+//    {
+//        $this->correspondances = new ArrayCollection();
+//    }
 
 
     public function getId(): ?int
@@ -51,36 +51,36 @@ class Duree
         return $this;
     }
 
-    /**
-     * @return Collection|Correspondance[]
-     */
-    public function getCorrespondances(): Collection
-    {
-        return $this->correspondances;
-    }
-
-    public function addCorrespondance(Correspondance $correspondance): self
-    {
-        if (!$this->correspondances->contains($correspondance)) {
-            $this->correspondances[] = $correspondance;
-            $correspondance->setDuree($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCorrespondance(Correspondance $correspondance): self
-    {
-        if ($this->correspondances->contains($correspondance)) {
-            $this->correspondances->removeElement($correspondance);
-            // set the owning side to null (unless already changed)
-            if ($correspondance->getDuree() === $this) {
-                $correspondance->setDuree(null);
-            }
-        }
-
-        return $this;
-    }
+//    /**
+//     * @return Collection|Correspondance[]
+//     */
+//    public function getCorrespondances(): Collection
+//    {
+//        return $this->correspondances;
+//    }
+//
+//    public function addCorrespondance(Correspondance $correspondance): self
+//    {
+//        if (!$this->correspondances->contains($correspondance)) {
+//            $this->correspondances[] = $correspondance;
+//            $correspondance->setDuree($this);
+//        }
+//
+//        return $this;
+//    }
+//
+//    public function removeCorrespondance(Correspondance $correspondance): self
+//    {
+//        if ($this->correspondances->contains($correspondance)) {
+//            $this->correspondances->removeElement($correspondance);
+//            // set the owning side to null (unless already changed)
+//            if ($correspondance->getDuree() === $this) {
+//                $correspondance->setDuree(null);
+//            }
+//        }
+//
+//        return $this;
+//    }
 
     public function __toString()
     {

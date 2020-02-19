@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Boutique{% endblock %}
+
+{% block banner %}
+    <div class="banner d-flex justify-content-center"><img class="w-100" src="{{ asset('build/image/banner_boutique.png') }}" alt="banner"></div>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center py-3 pr-5 boutique">
+                <h1>Boutique en lancement</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center py-2 pr-5 boutique">
+                <img class="image_boutique" src="{{ asset('build/image/image_boutique.png') }}" alt="boutique">
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footertitre %}
+    Anatomie
+{% endblock %}
+{% block footersoustitre %}
+    Mais qu'est-ce que c'est ?
+{% endblock %}

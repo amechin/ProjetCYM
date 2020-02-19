@@ -23,11 +23,6 @@ class Categorie
      */
     private $nom;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Correspondance", mappedBy="categorie", orphanRemoval=true)
-     */
-    private $correspondances;
-
     public function __construct()
     {
         $this->correspondances = new ArrayCollection();
@@ -46,37 +41,6 @@ class Categorie
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection|Correspondance[]
-     */
-    public function getCorrespondances(): Collection
-    {
-        return $this->correspondances;
-    }
-
-    public function addCorrespondance(Correspondance $correspondance): self
-    {
-        if (!$this->correspondances->contains($correspondance)) {
-            $this->correspondances[] = $correspondance;
-            $correspondance->setCategorie($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCorrespondance(Correspondance $correspondance): self
-    {
-        if ($this->correspondances->contains($correspondance)) {
-            $this->correspondances->removeElement($correspondance);
-            // set the owning side to null (unless already changed)
-            if ($correspondance->getCategorie() === $this) {
-                $correspondance->setCategorie(null);
-            }
-        }
 
         return $this;
     }

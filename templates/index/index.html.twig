@@ -9,7 +9,7 @@
 {% block body %}
         {#                    Partie de gauche #}
         <div class="fleche-boutique-box">
-            <a href="">
+            <a href="{{ path('boutique-index') }}">
                 <img class="fleche-boutique" src="{{ asset('build/images/panneau_boutique.png') }}" alt="La boutique">
             </a>
         </div>
@@ -35,15 +35,16 @@
         </div>
 
         <div class="fleche-ccm-box">
-            <a href="">
+            <a href="{{ path('ccm-index') }}">
                 <img class="fleche-ccm" src="{{ asset('build/images/panneau_ccm.png') }}" alt="Comment ça marche">
             </a>
         </div>
 
 
 {% endblock %}
-{% block footertitre %}Anatomie{% endblock %}
-{% block footersoustitre %}Mais qu'est-ce que c'est ?{% endblock %}
+{% block footerTitre %}{{ footer.Titre }}{% endblock %}
+{% block footerSousTitre %}{{ footer.Soustitre }}{% endblock %}
+{% block footerDescription%}{{ footer.Description }}{% endblock %}
 
 
 

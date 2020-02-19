@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\RessourceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\BoutiqueRepository")
  */
-class Ressource
+class Boutique
 {
     /**
      * @ORM\Id()
@@ -17,12 +17,12 @@ class Ressource
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $nom;
+    private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=500, nullable=true)
      */
     private $description;
 
@@ -32,28 +32,23 @@ class Ressource
     private $image;
 
     /**
-     * @ORM\Column(type="string", length=1000)
+     * @ORM\Column(type="string", length=500)
      */
-    private $lien;
-
-    /**
-     * @ORM\Column(type="string", length=500, nullable=true)
-     */
-    private $imageFilename;
+    private $image_filename;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getTitre(): ?string
     {
-        return $this->nom;
+        return $this->titre;
     }
 
-    public function setNom(string $nom): self
+    public function setTitre(?string $titre): self
     {
-        $this->nom = $nom;
+        $this->titre = $titre;
 
         return $this;
     }
@@ -63,7 +58,7 @@ class Ressource
         return $this->description;
     }
 
-    public function setDescription(string $description): self
+    public function setDescription(?string $description): self
     {
         $this->description = $description;
 
@@ -82,26 +77,14 @@ class Ressource
         return $this;
     }
 
-    public function getLien(): ?string
-    {
-        return $this->lien;
-    }
-
-    public function setLien(string $lien): self
-    {
-        $this->lien = $lien;
-
-        return $this;
-    }
-
     public function getImageFilename(): ?string
     {
-        return $this->imageFilename;
+        return $this->image_filename;
     }
 
-    public function setImageFilename(?string $imageFilename): self
+    public function setImageFilename(string $image_filename): self
     {
-        $this->imageFilename = $imageFilename;
+        $this->image_filename = $image_filename;
 
         return $this;
     }

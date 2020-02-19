@@ -2,24 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/routes/easy_admin.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scss/ccm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/Capture d’écran 2020-02-14 à 13.04.50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_boutique.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_ccm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_design.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_ressources.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/istockphoto-1044893284-1024x1024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/CcmController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Boutique.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/CCM.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219104403.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105031.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105431.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105750.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219114811.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219121919.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/BoutiqueRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CCMRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/FooterRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/boutique/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ccm/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/cymsymfony5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cymsymfony5.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/translation.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/translation.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminIndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Carte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carte.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Duree.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Duree.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ressource.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ressource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin_index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin_index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base-arbre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +86,13 @@
         <item name="cym.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cym.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="footer: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -188,6 +223,8 @@
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/vendor/jms/metadata" />
+      <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WyhPU8WxdgNuyc80agmTyvF3a6" />
@@ -211,6 +248,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/scss" />
       <recent name="$PROJECT_DIR$/assets/image" />
@@ -234,7 +274,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -271,7 +316,8 @@
       <workItem from="1581691182176" duration="10864000" />
       <workItem from="1582017958927" duration="4195000" />
       <workItem from="1582022299752" duration="4299000" />
-      <workItem from="1582038766132" duration="10310000" />
+      <workItem from="1582038766132" duration="10465000" />
+      <workItem from="1582098016977" duration="18683000" />
     </task>
     <servers />
   </component>
@@ -317,11 +363,11 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.819@0.23.1440.819" timestamp="1581611216368" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582041041925">
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582110295165">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580998546188" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582041041925" />
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582110295165" />
     <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1580395616937">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -360,10 +406,10 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.819@0.23.1440.819" timestamp="1581611766192" />
-    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1581609774277">
+    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1582113687858">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.819@0.23.1440.819" timestamp="1581609774277" />
+    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.819@0.23.1440.819" timestamp="1582113687858" />
     <state x="399" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1581606629032">
       <screen x="0" y="23" width="1440" height="819" />
     </state>

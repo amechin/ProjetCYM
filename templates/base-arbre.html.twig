@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     {% block stylesheets %}
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,11 +20,11 @@
         <div class="nav flex-column">
             <div id="navbarSupportedContent">
                 <div class="collapse d-flex align-items-center">
-                    <a class="button_nav" href="" id="1"></a>
+                    <a class="button_nav" href="{{ path('index') }}" id="1"></a>
                     <div class="text-button" id="text-1">Accueil</div>
                 </div>
                 <div class="collapse d-flex align-items-center">
-                    <a class="button_nav" href="" id="2"></a>
+                    <a class="button_nav" href="{{ path('ccm-index') }} " id="2"></a>
                     <div class="text-button" id="text-2">Comment ça marche ?</div>
                 </div>
                 <div class="collapse d-flex align-items-center">
@@ -32,13 +32,25 @@
                     <div class="text-button" id="text-3">Ressources</div>
                 </div>
                 <div class="collapse d-flex align-items-center">
-                    <a class="button_nav" href="" id="4"></a>
+                    <a class="button_nav" href="{{ path('boutique-index') }}" id="4"></a>
                     <div class="text-button" id="text-4">Boutique</div>
                 </div>
                 <div class="collapse d-flex align-items-center">
                     <a class="button_nav" href="" id="5"></a>
                     <div class="text-button" id="text-5">Contact</div>
                 </div>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <div class="collapse d-flex align-items-center">
+                        <a class="button_nav" href="{{ path('app_logout') }}" id="6"></a>
+                        <div class="text-button" id="text-6">Deconnexion</div>
+
+                    </div>
+                {% else %}
+                    <div class="collapse d-flex align-items-center">
+                        <a class="button_nav" href="{{ path('app_login') }}" id="7"></a>
+                        <div class="text-button" id="text-7">Connexion</div>
+                    </div>
+                {% endif %}
             </div>
         </div>
     </div>

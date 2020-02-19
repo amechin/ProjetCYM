@@ -4,42 +4,116 @@ easy_admin:
         brand_color: '#d6a400'
         menu:
             - { label: 'Gestion Arbre' }
-            - Duree
+            - { entity: 'Duree', label: 'Durée' }
             - Participant
-            - Categorie
-            - Sous_Categorie
-            - Parametrage_Arbre
+            - { entity: 'Categorie', label: 'Catégorie' }
+            - { entity: 'Sous_Categorie', label: 'Sous_Catégorie' }
+            - { entity: 'Parametrage_Arbre', label: 'Paramètrage_Arbre' }
             - { label: 'Gestion Ressource'}
             - Ressource
             - { label: 'Gestion Comment ça Marche'}
-#            - Ressource
+            - Comment_Ca_Marche
+            - { label: 'Gestion Boutique'}
+            - Boutique
+            - { label: 'Gestion Bas de Page'}
+            - { entity: 'Footer', label: 'Paramètrage bas de page' }
             - { label: 'Gestion Email Admin'}
             - Utilisateur
-
     entities:
         Duree:
             class: App\Entity\Duree
+            help: 'Cette section permet de modifier les DUREES pour le paramétrage des Design'
+            list:
+                title: "Admin des Durées"
+                fields:
+                    - id
+                    - { property: 'duree', label: 'Durée' }
+
         Participant:
             class: App\Entity\Groupe
+            help: 'Cette section permet de modifier les PARTICIPANTS pour le paramétrage des Design'
+            list:
+                title: "Admin des Participants"
+                fields:
+                    - id
+                    - { property: 'groupe', label: 'Nombre de participants' }
         Categorie:
+            help: 'Cette section permet de modifier les CATEGORIES. Attention certains objets sont fixes et ne peuvent pas être modifier (frise, 5 étapes).'
             class: App\Entity\Categorie
+            disabled_actions: ['new', 'delete']
+            list:
+                title: "Admin des Catégories"
+                fields:
+                    - id
+                    - { property: 'nom', label: 'Nom de la catégorie' }
         Sous_Categorie:
+            help: 'Cette section permet de modifier les SOUS-CATEGORIES'
             class: App\Entity\Carte
+            list:
+                title: "Admin des Sous-Catégories"
         Parametrage_Arbre:
             class: App\Entity\Correspondance
+            help: 'Cette section permet de modifier l arbre en lui rattachant des exercices'
+            list:
+                title: "Admin des Correspondances"
             form:
                 fields:
-                    - { property: 'categorie', type: 'easyadmin_autocomplete' }
-                    - { property: 'duree', type: 'easyadmin_autocomplete' }
-                    - { property: 'carte', type: 'easyadmin_autocomplete' }
-                    - { property: 'groupe', type: 'easyadmin_autocomplete' }
+#                    - { property: 'categorie', type: 'easyadmin_autocomplete' }
+                    - { property: 'duree', label: 'Durée' }
+                    - { property: 'groupe', label: 'Participants' }
+                    - { property: 'categorie', label: 'Catégories' }
+                    - { property: 'carte', label: 'Sous-catégories' }
                     - { property: 'ExerciceId', type: 'text' }
         Ressource:
+            help: 'Cette section permet de modifier toutes les RESSOURCES du site CYM'
             class: App\Entity\Ressource
-#        Comment_Ca_Marche:
-#            class: App\Entity\Ccm
+            list:
+                title: "Admin des Ressources"
+            form:
+                fields:
+                    - nom
+                    - description
+                    - { property: 'image', type: 'file_upload' }
+                    - lien
+        Comment_Ca_Marche:
+            help: 'Cette section permet de modifier la partie COMMENT CA MARCHE du site CYM'
+            class: App\Entity\CCM
+            list:
+                title: "Admin Comment ça Marche"
+            form:
+                fields:
+                    - titre
+                    - description
+                    - { property: 'image', type: 'file_upload' }
+                    - { property: 'image_filename', label: 'Nom du fichier image (avec extension)' }
+        Boutique:
+            help: 'Cette section permet de modifier la partie BOUTIQUE du site CYM'
+            class: App\Entity\Boutique
+            list:
+                title: "Admin Boutique"
+            form:
+                fields:
+                    - titre
+                    - description
+                    - { property: 'image', type: 'file_upload' }
+                    - { property: 'image_filename', label: 'Nom du fichier image (avec extension)' }
+        Footer:
+            help: 'Cette section permet de modifier les bas de page dans la portion marron'
+            class: App\Entity\Footer
+            list:
+                title: "Admin Bas de Page"
+            form:
+                fields:
+                    - Page
+                    - titre
+                    - { property: 'soustitre', label: 'SousTitre' }
+                    - description
         Utilisateur:
             class: App\Entity\User
+            disabled_actions: ['new', 'delete']
+            list:
+                help: 'Dans cette section vous pouvez modifier votre adresse email. Pour changer votre mot de passe contactez Adrien MECHIN : adrien.mechin@gmail.com'
+                title: "Admin des droits d'utilisateur"
 
 
 

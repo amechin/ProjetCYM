@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     {% block stylesheets %}
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -39,6 +39,20 @@
                     <a class="button_nav" href="" id="5"></a>
                     <div class="text-button" id="text-5">Contact</div>
                 </div>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <div class="collapse d-flex align-items-center">
+                        <a class="button_nav" href="{{ path('app_logout') }}" id="6"></a>
+                            <div class="text-button" id="text-6">Deconnexion</div>
+
+                    </div>
+                {% else %}
+                    <div class="collapse d-flex align-items-center">
+                        <a class="button_nav" href="{{ path('app_login') }}" id="7"></a>
+                        <div class="text-button" id="text-7">Connexion</div>
+
+                    </div>
+                {% endif %}
+
             </div>
         </div>
     </div>
@@ -80,20 +94,19 @@
                     </div>
                     <div class="col-4 p-0">
                         <div class="anatomie h4">
-                            Anatomie
+                            {% block footerTitre %}{% endblock %}
                         </div>
                     </div>
                     <div class="col-4">
                         <HR class="separateur1" size=4 align=center width="100%">
                     </div>
                 </div>
-                <p class="footer-titre">Mais qu'est-ce que c'est ?</p>
+                <p class="footer-titre">{% block footerSousTitre %}{% endblock %}</p>
                 <hr class="separateur2">
             </div>
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6 d-flex justify-content-center">
                 <div class="text_footer">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod
+                    <p>{% block footerDescription %}{% endblock %}
                     </p>
                 </div>
             </div>
