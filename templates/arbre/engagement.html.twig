@@ -21,7 +21,7 @@
 
         {#        affichage de la fresque chrono#}
         <div class="row fresque-box">
-            <img src="{{ asset("build/images/timeline_cc.0e1bec64.png") }}" alt="Fresque chronologique"
+            <img src="{{ asset("build/images/timeline_engagement.9134eaa3.png") }}" alt="Fresque chronologique"
                  class="timeline">
         </div>
 
@@ -29,13 +29,13 @@
         {#        Affichage de la catégorie selectionnée#}
         <div class="row images-et-creer-champ-box">
             <div class="col-12 col-md-4">
-                <img src="{{ asset("build/images/mains.png") }}" class="images-gauche-arbre" alt="mains">
+                <img src="{{ asset("build/images/regle.01868ef7.png") }}" class="images-gauche-arbre" alt="mains">
             </div>
             <div class="col-12 col-md-4">
                 <p class="text-center texte-arbre">{{ catSelect }}</p>
             </div>
             <div class="col-12 col-md-4">
-                <img src="{{ asset("build/images/fleur.png") }}" class="images-droite-arbre" alt="fleur">
+                <img src="{{ asset("build/images/roi.50e6452d.png") }}" class="images-droite-arbre" alt="fleur">
             </div>
         </div>
 
@@ -58,8 +58,8 @@
         <div class="row sous-categorie-box">
             {% for carte in cartes %}
 
-{#                A modifier#}
-                <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe': groupe, 'carte': carte.0}) }}">
+                {#                A modifier#}
+                <a href="{{ path('reunion-engagement', {'duree': duree, 'groupe': groupe, 'carte': carte.0}) }}">
                     <div class="btn btn-outline-light texte-sous-categorie mx-4">
                         {{ carte.1 }}
                     </div>
@@ -85,7 +85,7 @@
                                 {% if exercice is defined %}
 
                                     {#                A modifier#}
-                                    <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe':groupe, 'carte': carte, 'exo': exercice.id, 'catId': catSelectId}) }}"
+                                    <a href="{{ path('reunion-engagement', {'duree': duree, 'groupe':groupe, 'carte': carte, 'exo': exercice.id, 'catId': catSelectId}) }}"
                                        class="btn btn-lg btn-outline-success m-auto">Ajouter</a>
                                 {% endif %}
                             </div>
@@ -96,7 +96,7 @@
         </div>
 
         <div class="row fleche-box-cc">
-            <a href="{{ path('reunion-engagement', {'duree': duree, 'groupe':groupe}) }}">
+            <a href="{{ path('reunion-synergie', {'duree': duree, 'groupe':groupe}) }}">
                 <img src="{{ asset("build/images/fleche_suivant.png") }}" class="my-0 fleche-suivant" alt="suivant">
             </a>
         </div>

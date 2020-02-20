@@ -109,6 +109,251 @@ class ArbreController extends AbstractController
     }
 
     /**
+     * @Route("/en/{duree}/{groupe}/{carte}", name="reunion-engagement")
+     */
+    public function engagement(Request $request, int $duree, int $groupe, int $carte = null)
+    {
+        $catSelect = "Engagement";
+        $catSelectId = 2;
+        $exercices = null;
+        $dataExercices = null;
+
+        if ($request->query->get('exo') != null) {
+            $session = $request->getSession();
+            $exo = $request->query->get('exo');
+            $cat = $request->query->get('catId');
+
+            $titre = TitreExercices::unTitre($exo);
+
+            $tab_temp = [
+                $cat => [
+                    $exo => $titre
+                ]
+            ];
+
+            $synthese = $session->get('synthese');
+            if (!is_array($synthese)) {
+                $synthese = [];
+            }
+
+            if (!in_array($synthese, $tab_temp)) {
+                array_push($synthese, $tab_temp);
+                $session->set('synthese', $synthese);
+                $this->addFlash('notice', 'Vous venez d\'ajouter un exercice, vous pouvez poursuivre votre Design');
+            }
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
+        $cartes = SupprimerDoublons::unique($cartes);
+
+        $categories = $em->getRepository(Categorie::class)->findAll();
+
+        if (null != $carte) {
+            $exercices = $em->getRepository(Correspondance::class)
+                ->findByExercices($duree, $groupe, $catSelectId, $carte);
+            $dataExercices = TitreExercices::titreExercices($exercices);
+        }
+
+        return $this->render('arbre/engagement.html.twig',
+            [
+                'duree' => $duree,
+                'groupe' => $groupe,
+                'cartes' => $cartes,
+                'carte' => $carte,
+                'categories' => $categories,
+                'catSelect' => $catSelect,
+                'catSelectId' => $catSelectId,
+                'exercices' => $dataExercices
+            ]);
+    }
+
+    /**
+ * @Route("/sy/{duree}/{groupe}/{carte}", name="reunion-synergie")
+ */
+    public function synergie(Request $request, int $duree, int $groupe, int $carte = null)
+    {
+        $catSelect = "Synergie";
+        $catSelectId = 3;
+        $exercices = null;
+        $dataExercices = null;
+
+        if ($request->query->get('exo') != null) {
+            $session = $request->getSession();
+            $exo = $request->query->get('exo');
+            $cat = $request->query->get('catId');
+
+            $titre = TitreExercices::unTitre($exo);
+
+            $tab_temp = [
+                $cat => [
+                    $exo => $titre
+                ]
+            ];
+
+            $synthese = $session->get('synthese');
+            if (!is_array($synthese)) {
+                $synthese = [];
+            }
+
+            if (!in_array($synthese, $tab_temp)) {
+                array_push($synthese, $tab_temp);
+                $session->set('synthese', $synthese);
+                $this->addFlash('notice', 'Vous venez d\'ajouter un exercice, vous pouvez poursuivre votre Design');
+            }
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
+        $cartes = SupprimerDoublons::unique($cartes);
+
+        $categories = $em->getRepository(Categorie::class)->findAll();
+
+        if (null != $carte) {
+            $exercices = $em->getRepository(Correspondance::class)
+                ->findByExercices($duree, $groupe, $catSelectId, $carte);
+            $dataExercices = TitreExercices::titreExercices($exercices);
+        }
+
+        return $this->render('arbre/synergie.html.twig',
+            [
+                'duree' => $duree,
+                'groupe' => $groupe,
+                'cartes' => $cartes,
+                'carte' => $carte,
+                'categories' => $categories,
+                'catSelect' => $catSelect,
+                'catSelectId' => $catSelectId,
+                'exercices' => $dataExercices
+            ]);
+    }
+
+    /**
+     * @Route("/an/{duree}/{groupe}/{carte}", name="reunion-ancrage")
+     */
+    public function ancrage(Request $request, int $duree, int $groupe, int $carte = null)
+    {
+        $catSelect = "Ancrage";
+        $catSelectId = 4;
+        $exercices = null;
+        $dataExercices = null;
+
+        if ($request->query->get('exo') != null) {
+            $session = $request->getSession();
+            $exo = $request->query->get('exo');
+            $cat = $request->query->get('catId');
+
+            $titre = TitreExercices::unTitre($exo);
+
+            $tab_temp = [
+                $cat => [
+                    $exo => $titre
+                ]
+            ];
+
+            $synthese = $session->get('synthese');
+            if (!is_array($synthese)) {
+                $synthese = [];
+            }
+
+            if (!in_array($synthese, $tab_temp)) {
+                array_push($synthese, $tab_temp);
+                $session->set('synthese', $synthese);
+                $this->addFlash('notice', 'Vous venez d\'ajouter un exercice, vous pouvez poursuivre votre Design');
+            }
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
+        $cartes = SupprimerDoublons::unique($cartes);
+
+        $categories = $em->getRepository(Categorie::class)->findAll();
+
+        if (null != $carte) {
+            $exercices = $em->getRepository(Correspondance::class)
+                ->findByExercices($duree, $groupe, $catSelectId, $carte);
+            $dataExercices = TitreExercices::titreExercices($exercices);
+        }
+
+        return $this->render('arbre/ancrage.html.twig',
+            [
+                'duree' => $duree,
+                'groupe' => $groupe,
+                'cartes' => $cartes,
+                'carte' => $carte,
+                'categories' => $categories,
+                'catSelect' => $catSelect,
+                'catSelectId' => $catSelectId,
+                'exercices' => $dataExercices
+            ]);
+    }
+
+    /**
+     * @Route("/de/{duree}/{groupe}/{carte}", name="reunion-declusion")
+     */
+    public function declusion(Request $request, int $duree, int $groupe, int $carte = null)
+    {
+        $catSelect = "Déclusion";
+        $catSelectId = 5;
+        $exercices = null;
+        $dataExercices = null;
+
+        if ($request->query->get('exo') != null) {
+            $session = $request->getSession();
+            $exo = $request->query->get('exo');
+            $cat = $request->query->get('catId');
+
+            $titre = TitreExercices::unTitre($exo);
+
+            $tab_temp = [
+                $cat => [
+                    $exo => $titre
+                ]
+            ];
+
+            $synthese = $session->get('synthese');
+            if (!is_array($synthese)) {
+                $synthese = [];
+            }
+
+            if (!in_array($synthese, $tab_temp)) {
+                array_push($synthese, $tab_temp);
+                $session->set('synthese', $synthese);
+                $this->addFlash('notice', 'Vous venez d\'ajouter un exercice, vous pouvez poursuivre votre Design');
+            }
+        }
+
+        $em = $this->getDoctrine()->getManager();
+
+        $cartes = $em->getRepository(Correspondance::class)->findByCartes($duree, $groupe, $catSelectId);
+        $cartes = SupprimerDoublons::unique($cartes);
+
+        $categories = $em->getRepository(Categorie::class)->findAll();
+
+        if (null != $carte) {
+            $exercices = $em->getRepository(Correspondance::class)
+                ->findByExercices($duree, $groupe, $catSelectId, $carte);
+            $dataExercices = TitreExercices::titreExercices($exercices);
+        }
+
+        return $this->render('arbre/declusion.html.twig',
+            [
+                'duree' => $duree,
+                'groupe' => $groupe,
+                'cartes' => $cartes,
+                'carte' => $carte,
+                'categories' => $categories,
+                'catSelect' => $catSelect,
+                'catSelectId' => $catSelectId,
+                'exercices' => $dataExercices
+            ]);
+    }
+
+
+    /**
      * @Route("/synthese", name="reunion-synthese")
      */
     public function synthese(Request $request)

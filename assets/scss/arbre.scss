@@ -2,60 +2,60 @@
 @import "mixins";
 
 //Partie Paramètres
-.img-gauche-box{
+.img-gauche-box {
   position: absolute;
   top: 12rem;
   left: 10rem;
 }
 
-.img-gauche{
+.img-gauche {
   width: 50rem;
 }
 
-.fleche-box{
+.fleche-box {
   position: absolute;
   bottom: 25rem;
   right: 10rem;
 }
 
-.fleche-box-cc{
+.fleche-box-cc {
   position: absolute;
   top: 30rem;
   right: 10rem;
 }
 
-.fleche-suivant{
-   background-image: url("../image/fleche_suivant.png");
-   width: 13rem;
-   height: 9rem;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
- }
+.fleche-suivant {
+  background-image: url("../image/fleche_suivant.png");
+  width: 13rem;
+  height: 9rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.rondBoxGroupe{
+.rondBoxGroupe {
   position: absolute;
   top: 33rem;
   right: 49.7rem;
-  transform: translate(+50%,0);
-  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  transform: translate(+50%, 0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
   border-radius: 50%;
 }
 
-.rondBoxDuree{
+.rondBoxDuree {
   position: absolute;
   top: 19rem;
   right: 50rem;
-  transform: translate(+50%,+25%);
-  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  transform: translate(+50%, +25%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
   border-radius: 50%;
 }
 
-.formDureeBox{
+.formDureeBox {
   position: absolute;
   top: 27rem;
   right: 51rem;
-  transform: translate(+50%,+25%);
+  transform: translate(+50%, +25%);
 }
 
 
@@ -63,19 +63,19 @@
   position: absolute;
   top: 40rem;
   right: 49.7rem;
-  transform: translate(+50%,+25%);
+  transform: translate(+50%, +25%);
 }
 
-input[type="radio"]{
+input[type="radio"] {
   margin: 0 .5rem 0 3rem;
 }
 
-.radio-form{
+.radio-form {
   font-size: 1.2rem;
   font-weight: 500;
 }
 
-.titre-correspondance{
+.titre-correspondance {
   font-size: 1.6rem;
   text-align: center;
   background-color: $brown;
@@ -86,7 +86,7 @@ input[type="radio"]{
   border: .11rem solid white;
 }
 
-.petitRond{
+.petitRond {
   width: 80px;
   height: 80px;
   margin: 0;
@@ -96,18 +96,18 @@ input[type="radio"]{
 }
 
 .image-arbre_engagement {
-  width:30%;
-  height:30%;
+  width: 30%;
+  height: 30%;
 }
 
-.card{
- /* height: 13em;
-  width: 10em;
-  margin: auto;
-  padding: auto;*/
+.card {
+  /* height: 13em;
+   width: 10em;
+   margin: auto;
+   padding: auto;*/
 }
 
-.titre-card{
+.titre-card {
   color: $brown;
   font-size: 1.4rem;
   margin: auto;
@@ -122,112 +122,128 @@ input[type="radio"]{
   border-radius: 5px;
 }
 
-.btn-dark{
+.btn-dark {
   background-color: $brown;
 }
 
-.timeline-Box{
+.timeline-Box {
   position: absolute;
   top: 100rem;
   left: 35rem;
 }
 
-.timeline{
+.timeline {
   width: 70rem;
   margin: auto;
 }
 
-.fresque-box{
+.fresque-box {
   position: absolute;
   top: $banner-box-top + 1*10rem;
 }
 
-.message-box{
+.message-box {
   position: absolute;
   top: $banner-box-top + .6*10rem;
 }
 
-.images-et-creer-champ-box{
+.images-et-creer-champ-box {
   position: absolute;
   top: $banner-box-top + 2*10rem;
 }
 
-.consigne-box{
+.consigne-box {
   position: absolute;
   top: $banner-box-top + 3.4*10rem;
 }
 
-.fleche-bas-box{
+.fleche-bas-box {
   position: absolute;
   top: $banner-box-top + 3.6*10rem;
 }
 
-.sous-categorie-box{
+.sous-categorie-box {
   position: absolute;
   top: $banner-box-top + 4*10rem;
 }
 
-.exercices-box{
+.exercices-box {
   position: absolute;
   top: $banner-box-top + 4.8*10rem;
+  min-width: 60rem;
 }
 
-.images-gauche-arbre{
+.exercices-col {
+  min-width: 60rem;
+}
+
+.images-gauche-arbre {
   width: 15rem;
   float: left;
 }
 
-.images-droite-arbre{
+.images-droite-arbre {
   width: 15rem;
   align-content: flex-end;
 }
 
-.texte-arbre{
-  font-size: 1.6rem;
+.texte-arbre {
+  margin: auto;
+  font-size: 1.7rem;
   font-weight: 600;
   color: $brown;
   background-color: white;
-  padding: 3rem 3rem;
+  padding-top: 4.5rem;
   border-radius: 50%;
   border: .5px solid $brown;
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
+  width: 12.5rem;
+  height: 12rem;
 }
 
-.texte-sous-categorie{
+.texte-sous-categorie {
   font-size: 1.4rem;
   background-color: $brown;
   color: white;
   padding: 1rem;
   border-radius: 1.4rem;
   width: 15rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   transition: all .3s ease-in-out;
 }
 
-.texte-sous-categorie:hover{
+.texte-sous-categorie:hover {
   transform: translateY(-5px);
 }
 
-.exercices{
+.exercices {
   border-radius: 1rem;
   border: 1px solid $brown;
-  box-shadow: 0 3px 6px rgba(0,0,0,.5);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .5);
   min-width: 56rem !important;
 }
 
-.consigne{
+.consigne {
   font-size: 1.6rem;
   color: $brown;
 }
 
 
-@keyframes down{
-  0% {position:relative; top:0px; opacity: 0}
-  100% {position:relative; top:10px; opacity: 1}
+@keyframes down {
+  0% {
+    position: relative;
+    top: 0px;
+    opacity: 0
+  }
+  100% {
+    position: relative;
+    top: 10px;
+    opacity: 1
+  }
 
 }
 
-.fleche-bas{
+.fleche-bas {
   animation: down 1s infinite ease-in-out alternate;
   width: 3.5rem;
 }
@@ -235,21 +251,21 @@ input[type="radio"]{
 
 //mail
 
-.image-mail-box{
+.image-mail-box {
   position: absolute;
   top: $banner-box-top + 1*10rem;
 }
 
-.message-mail-box{
+.message-mail-box {
   position: absolute;
   top: $banner-box-top + 3.8*10rem;
 }
 
-.button-mail-box{
+.button-mail-box {
   position: absolute;
   top: $banner-box-top + 4.6*10rem;
 }
 
-.image-mail{
+.image-mail {
   width: 70rem;
 }

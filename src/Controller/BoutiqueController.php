@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\BoutiqueRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -13,10 +14,10 @@ class BoutiqueController extends AbstractController
     /**
      * @Route("/", name="boutique-index")
      */
-    public function index()
+    public function index(BoutiqueRepository $boutiqueRepository)
     {
         return $this->render('boutique/index.html.twig', [
-            'controller_name' => 'BoutiqueController',
+            'articles' => $boutiqueRepository->findAll()
         ]);
     }
 }

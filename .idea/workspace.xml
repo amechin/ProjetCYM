@@ -2,52 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scss/ccm.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/Capture d’écran 2020-02-14 à 13.04.50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_boutique.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_ccm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_design.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_ressources.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/istockphoto-1044893284-1024x1024.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CcmController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Boutique.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/CCM.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219104403.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105031.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105431.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219105750.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219114811.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200219121919.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/BoutiqueRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CCMRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/FooterRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/boutique/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ccm/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cymsymfony5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cymsymfony5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/timeline_ancrage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/timeline_declusion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/timeline_engagement.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/image/timeline_synergie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/image_boutique.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/arbre/ancrage.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/arbre/declusion.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/arbre/engagement.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/arbre/synergie.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Carte.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Categorie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categorie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Duree.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Duree.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Groupe.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ressource.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ressource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/boutique.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/boutique.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BoutiqueController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-arbre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/boutique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/boutique/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +63,7 @@
         <item name="cym.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="footer: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="boutique: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -243,20 +214,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/arbre" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/scss" />
+      <recent name="$PROJECT_DIR$/templates/arbre" />
       <recent name="$PROJECT_DIR$/assets/image" />
+      <recent name="$PROJECT_DIR$/assets/scss" />
       <recent name="$PROJECT_DIR$/templates/correspondance" />
       <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/bin" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
     </key>
   </component>
   <component name="RunManager">
@@ -274,12 +245,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -318,6 +284,7 @@
       <workItem from="1582022299752" duration="4299000" />
       <workItem from="1582038766132" duration="10465000" />
       <workItem from="1582098016977" duration="18683000" />
+      <workItem from="1582182566809" duration="6160000" />
     </task>
     <servers />
   </component>
