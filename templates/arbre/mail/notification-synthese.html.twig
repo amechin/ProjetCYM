@@ -1,0 +1,159 @@
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
+
+{% block title %}Arbre{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner h-75">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <p class="display-4 mon-design-texte">Mon Design</p>
+        </div>
+        <div class="row d-flex justify-content-center mt-3">
+            <h2 class="mon-design-texte">durée : {{ duree }} - participants : {{ groupe }}</h2>
+        </div>
+
+
+        {#        creer le champ#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/creerChamp.6b22092e.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 1 == cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {#        engagement#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/engagement.c9163a35.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 2== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        {#        synergie#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/synergie.589e9f63.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 3== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        {#        ancrage#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/ancrage.193b817e.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 4== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        {#        declusion#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/declusion.9b0b7e71.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 5== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

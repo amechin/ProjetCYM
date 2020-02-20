@@ -6,7 +6,11 @@ use App\Entity\Categorie;
 use App\Entity\Contact;
 use App\Entity\Correspondance;
 use App\Form\ContactType;
+use App\Form\CorrespondanceType;
 use App\Form\ParamType;
+use App\Form\SyntheseType;
+use App\Repository\DureeRepository;
+use App\Repository\GroupeRepository;
 use App\Service\SupprimerDoublons;
 use App\Service\TitreExercices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -170,8 +174,8 @@ class ArbreController extends AbstractController
     }
 
     /**
- * @Route("/sy/{duree}/{groupe}/{carte}", name="reunion-synergie")
- */
+     * @Route("/sy/{duree}/{groupe}/{carte}", name="reunion-synergie")
+     */
     public function synergie(Request $request, int $duree, int $groupe, int $carte = null)
     {
         $catSelect = "Synergie";
@@ -356,38 +360,90 @@ class ArbreController extends AbstractController
     /**
      * @Route("/synthese", name="reunion-synthese")
      */
-    public function synthese(Request $request)
+    public function synthese(Request $request, DureeRepository $dureeRepository, GroupeRepository $groupeRepository, \Swift_Mailer $mailer)
     {
         $session = $request->getSession();
         $synthese = $session->get('synthese');
+        $groupeId = $request->query->get('groupe');
+        $dureeId = $request->query->get('duree');
+        $creerChamp = null;
+        $engagement=null;
+        $synergie=null;
+        $ancrage=null;
+        $declusion=null;
 
+        foreach ($synthese as $item){
+            foreach ($item as $sousCategorie => $exo){
+                foreach ($exo as $numeroExo => $value){
+                    if($sousCategorie == 1)
+                        $creerChamp .= $numeroExo . '-';
+                    if($sousCategorie==2)
+                        $engagement .= $numeroExo . '-';
+                    if($sousCategorie == 3)
+                        $synergie .= $numeroExo . '-';
+                    if($sousCategorie==4)
+                        $ancrage .= $numeroExo . '-';
+                    if($sousCategorie==5)
+                        $declusion .= $numeroExo . '-';
+                }
+            }
+        }
+        $groupe = $groupeRepository->find($groupeId);
+        $duree= $dureeRepository->find($dureeId);
+
+//        une seule ligne en base et 5 colonnes
+
+        dump('creer le champ'. ' ' . $duree . ' ' . $groupe . ' ' . $creerChamp);
+        dump('engagement'. ' ' . $duree. ' ' . $groupe. ' ' . $engagement);
+        dump('synergie'. ' ' . $duree . ' ' . $groupe. ' ' . $synergie);
+        dump('ancrage'. ' ' . $duree. ' ' . $groupe. ' ' . $ancrage);
+        dump('declusion'. ' ' . $duree. ' ' . $groupe. ' ' . $declusion);
+
+
+        $form = $this->createForm(SyntheseType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $titre = $form->getData();
+
+            $message = (new \Swift_Message(
+                'Vous avez un nouveau message'))
+                ->setFrom('cook@labocollectif.fr')
+                ->setTo('cook@labocollectif.fr')
+                ->setBody($this->renderView(
+                    'arbre/mail/notification-synthese.html.twig',
+                    [
+                        'exercices' => $synthese,
+                        'duree' => $dureeRepository->find($dureeId),
+                        'groupe' => $groupeRepository->find($groupeId),
+                        'titre' => $titre
+                    ]),
+                    'text/html');;
+            $mailer->send($message);
+
+            return $this->redirectToRoute('index');
+        }
         return $this->render('arbre/synthese.html.twig',
             [
                 'exercices' => $synthese,
+                'duree' => $dureeRepository->find($dureeId),
+                'groupe' => $groupeRepository->find($groupeId),
+                'form' => $form->createView()
             ]);
     }
 
-    /**
-     * @Route("/send", name="synthese-send", methods={"GET","POST"})
-     */
-    public function mail(Request $request, \Swift_Mailer $mailer)
-    {
-        $session = $request->getSession();
-        $synthese = $session->get('synthese');
-
-        $message = (new \Swift_Message(
-            'Vous avez un nouveau message'))
-            ->setFrom('cook@labocollectif.fr')
-            ->setTo('cook@labocollectif.fr')
-            ->setBody($this->renderView(
-                'arbre/mail/notification-synthese.html.twig',
-                [
-                    'exercices' => $synthese,
-                ]),
-                'text/html');;
-        $mailer->send($message);
-
-        return $this->render('arbre/mail/design-sent.html.twig');
-    }
+//    /**
+//     * @Route("/send", name="synthese-send", methods={"GET","POST"})
+//     */
+//    public function mail(Request $request, \Swift_Mailer $mailer, DureeRepository $dureeRepository, GroupeRepository $groupeRepository)
+//    {
+//        $session = $request->getSession();
+//        $synthese = $session->get('synthese');
+//        $groupeId = $request->query->get('groupe');
+//        $dureeId = $request->query->get('duree');
+//
+//
+//        return $this->render('arbre/mail/design-sent.html.twig');
+//    }
 
 }

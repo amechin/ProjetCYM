@@ -1,44 +1,170 @@
-{% extends 'base-arbre.html.twig' %}
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
 
 {% block title %}Arbre{% endblock %}
 
 {% block banner %}
-    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner">
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner h-75">
 {% endblock %}
 
 {% block body %}
 
-    <div class="container d-flex justify-content-center">
-        <div class="row mon-design-box">
-            <h2>Mon Design</h2>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <p class="display-4 mon-design-texte">Mon Design</p>
         </div>
-        <div class="row cc-box d-flex justify-content-start">
+        <div class="row d-flex justify-content-around mt-3">
+            <h2 class="mon-design-texte">durée : {{ duree }} - participants : {{ groupe }}</h2>
+        </div>
+        <div class="row d-flex justify-content-around mt-3">
+            {{ form_start(form, {'attr': {'class': 'form-inline'}})}}
+
+                {{ form_label(form.titre, 'Titre de mon Design', {'label_attr': {'class': 'h5 mr-4 text-dark py-2 '}}) }}
+                {{ form_widget(form.titre, {'attr': {'class': 'form-control-lg mr-4'}}) }}
+
+                {{ form_label(form.email, 'Email', {'label_attr': {'class': 'h5 mr-4 text-dark py-2 '}}) }}
+                {{ form_widget(form.email, {'attr': {'class': 'form-control-lg mr-4'}}) }}
+
+                {{ form_widget(form.envoyer, {'attr': {'class': 'btn  btn-lg btn-dark'}}) }}
+            {{ form_end(form) }}
+        </div>
+
+        {#        creer le champ#}
+        <div class="row mt-5">
             <div class="col-2">
-                {#                <img src="{{ asset("build/images/creerChamp.6b22092e.png") }}" class="" alt="creerchamp">#}
+                <img src="{{ asset("build/images/creerChamp.6b22092e.png") }}" class="" alt="drapeau">
             </div>
         </div>
-        <div class="row cc-exercices-box mx-4">
+        <div class="row mt-4">
             {% for exercice in exercices %}
                 {% for cat, exo in exercice %}
                     {% for ex, titre in exo %}
                         {% if 1 == cat %}
                             <div class="col-6">
-                                    <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank">
-                                        <div class="card exercices-synthese my-1">
-                                            <div class="card-body text-center">
-                                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
-                                                   class="card-title">
-                                                    {{ titre }}</a>
-                                            </div>
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
                                         </div>
-                                    </a>
+                                    </div>
+                                </a>
                             </div>
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
             {% endfor %}
+        </div>
+        {#        engagement#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/engagement.c9163a35.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 2== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
 
+        {#        synergie#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/synergie.589e9f63.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 3== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
 
+        {#        ancrage#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/ancrage.193b817e.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 4== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+
+        {#        declusion#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/declusion.9b0b7e71.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for exercice in exercices %}
+                {% for cat, exo in exercice %}
+                    {% for ex, titre in exo %}
+                        {% if 5== cat %}
+                            <div class="col-6">
+                                <a href="https://jouer-collectif.com/contenu/{{ ex }}" target="_blank"
+                                   style="text-decoration: none">
+                                    <div class="card exercices-synthese my-1">
+                                        <div class="card-body text-center">
+                                            <div class="card-title" style="text-decoration: none">
+                                                {{ titre }}</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
         </div>
     </div>
     {# CREER LE CHAMP - Synthese des exercices choisis #}
