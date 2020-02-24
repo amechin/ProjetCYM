@@ -19,89 +19,157 @@ class Ressource
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom;
+    private $titre;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $description;
+    private $groupe;
 
     /**
-     * @ORM\Column(type="string", length=500)
+     * @ORM\Column(type="string", length=255)
      */
-    private $image;
+    private $duree;
 
     /**
-     * @ORM\Column(type="string", length=1000)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $lien;
+    private $cc;
 
     /**
-     * @ORM\Column(type="string", length=500, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $imageFilename;
+    private $eng;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $syn;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $anc;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $dec;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $designId;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNom(): ?string
+    public function getTitre(): ?string
     {
-        return $this->nom;
+        return $this->titre;
     }
 
-    public function setNom(string $nom): self
+    public function setTitre(string $titre): self
     {
-        $this->nom = $nom;
+        $this->titre = $titre;
 
         return $this;
     }
 
-    public function getDescription(): ?string
+    public function getGroupe(): ?string
     {
-        return $this->description;
+        return $this->groupe;
     }
 
-    public function setDescription(string $description): self
+    public function setGroupe(string $groupe): self
     {
-        $this->description = $description;
+        $this->groupe = $groupe;
 
         return $this;
     }
 
-    public function getImage(): ?string
+    public function getCc(): ?string
     {
-        return $this->image;
+        return $this->cc;
     }
 
-    public function setImage(string $image): self
+    public function setCc(string $cc): self
     {
-        $this->image = $image;
+        $this->cc = $cc;
 
         return $this;
     }
 
-    public function getLien(): ?string
+    public function getEng(): ?string
     {
-        return $this->lien;
+        return $this->eng;
     }
 
-    public function setLien(string $lien): self
+    public function setEng(string $eng): self
     {
-        $this->lien = $lien;
+        $this->eng = $eng;
 
         return $this;
     }
 
-    public function getImageFilename(): ?string
+    public function getSyn(): ?string
     {
-        return $this->imageFilename;
+        return $this->syn;
     }
 
-    public function setImageFilename(?string $imageFilename): self
+    public function setSyn(string $syn): self
     {
-        $this->imageFilename = $imageFilename;
+        $this->syn = $syn;
+
+        return $this;
+    }
+
+    public function getAnc(): ?string
+    {
+        return $this->anc;
+    }
+
+    public function setAnc(string $anc): self
+    {
+        $this->anc = $anc;
+
+        return $this;
+    }
+
+    public function getDec(): ?string
+    {
+        return $this->dec;
+    }
+
+    public function setDec(string $dec): self
+    {
+        $this->dec = $dec;
+
+        return $this;
+    }
+
+    public function getDesignId(): ?int
+    {
+        return $this->designId;
+    }
+
+    public function setDesignId(int $designId): self
+    {
+        $this->designId = $designId;
+
+        return $this;
+    }
+
+    public function getDuree(): ?string
+    {
+        return $this->duree;
+    }
+
+    public function setDuree(string $duree): self
+    {
+        $this->duree = $duree;
 
         return $this;
     }

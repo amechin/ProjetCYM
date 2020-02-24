@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/image/synergie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/SyntheseType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224085715.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224092546.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/synthese.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/synthese.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/TitreExercices.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TitreExercices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/mail/notification-synthese.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/mail/notification-synthese.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/synthese.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/synthese.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RessourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RessourceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Ressource.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ressource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/RessourceType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200218101048.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219104403.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200224085752.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105031.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105431.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105750.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219114811.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219121919.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/RessourceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RessourceRepository.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +56,6 @@
         <item name="cym.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="cym.db" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="boutique: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -236,7 +237,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -275,7 +281,7 @@
       <workItem from="1582022299752" duration="4299000" />
       <workItem from="1582038766132" duration="10465000" />
       <workItem from="1582098016977" duration="18683000" />
-      <workItem from="1582182566809" duration="14916000" />
+      <workItem from="1582182566809" duration="23886000" />
     </task>
     <servers />
   </component>
@@ -360,14 +366,14 @@
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580132536986" />
     <state width="498" height="398" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1580659946202" />
     <state width="500" height="400" key="SwitcherDM/0.23.1440.819@0.23.1440.819" timestamp="1582194658922" />
-    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1581611766192">
+    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1582532762467">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.819@0.23.1440.819" timestamp="1581611766192" />
-    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1582113687858">
+    <state x="627" y="334" width="342" height="220" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.23.1440.819@0.23.1440.819" timestamp="1582532762467" />
+    <state x="533" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1582537640698">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="456" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.819@0.23.1440.819" timestamp="1582113687858" />
+    <state x="533" y="123" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.23.1440.819@0.23.1440.819" timestamp="1582537640698" />
     <state x="399" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1581606629032">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
@@ -381,9 +387,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="57" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580995620463" />
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1581627345398">
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1582534382548">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1581627345398" />
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1582534382548" />
   </component>
 </project>

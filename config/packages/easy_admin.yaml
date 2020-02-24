@@ -28,6 +28,9 @@ easy_admin:
                 fields:
                     - id
                     - { property: 'duree', label: 'Durée' }
+            form:
+                fields:
+                    - { property: 'duree', label: 'Durée' }
 
         Participant:
             class: App\Entity\Groupe
@@ -36,6 +39,9 @@ easy_admin:
                 title: "Admin des Participants"
                 fields:
                     - id
+                    - { property: 'groupe', label: 'Nombre de participants' }
+            form:
+                fields:
                     - { property: 'groupe', label: 'Nombre de participants' }
         Categorie:
             help: 'Cette section permet de modifier les CATEGORIES. Attention certains objets sont fixes et ne peuvent pas être modifier (frise, 5 étapes).'
@@ -51,30 +57,49 @@ easy_admin:
             class: App\Entity\Carte
             list:
                 title: "Admin des Sous-Catégories"
+                fields:
+                    - id
+                    - { property: 'nom', label: 'Nom sous-catégorie' }
+            form:
+                fields:
+                    - { property: 'nom', label: 'Nom sous-catégorie' }
         Parametrage_Arbre:
             class: App\Entity\Correspondance
             help: 'Cette section permet de modifier l arbre en lui rattachant des exercices'
             list:
                 title: "Admin des Correspondances"
-            form:
                 fields:
-#                    - { property: 'categorie', type: 'easyadmin_autocomplete' }
                     - { property: 'duree', label: 'Durée' }
                     - { property: 'groupe', label: 'Participants' }
                     - { property: 'categorie', label: 'Catégories' }
                     - { property: 'carte', label: 'Sous-catégories' }
-                    - { property: 'ExerciceId', type: 'text' }
-        Ressource:
-            help: 'Cette section permet de modifier toutes les RESSOURCES du site CYM'
-            class: App\Entity\Ressource
-            list:
-                title: "Admin des Ressources"
+                    - { property: 'ExerciceId', label: 'N° Exercice' }
             form:
                 fields:
-                    - nom
-                    - description
-                    - { property: 'image', type: 'file_upload' }
-                    - lien
+#                   - { property: 'categorie', type: 'easyadmin_autocomplete' }
+                    - { property: 'duree', label: 'Durée' }
+                    - { property: 'groupe', label: 'Participants' }
+                    - { property: 'categorie', label: 'Catégories' }
+                    - { property: 'carte', label: 'Sous-catégories' }
+                    - { property: 'ExerciceId', type: 'text', label: 'N° Exercice' }
+        Ressource:
+            help: 'Cette section permet d administrer les Designs réalisé sur le site CYM'
+            class: App\Entity\Ressource
+            disabled_actions: ['new']
+            list:
+                title: "Admin des Designs"
+                fields:
+                    - { property: 'titre', label: 'Titre Design' }
+                    - { property: 'duree', label: 'Durée' }
+                    - { property: 'groupe', label: 'Participants' }
+                    - { property: 'cc', label: 'Ex. Créer le champ' }
+                    - { property: 'eng', label: 'Ex. Engagement' }
+                    - { property: 'syn', label: ' Ex. Synergie' }
+                    - { property: 'anc', label: 'Ex. Ancrage' }
+                    - { property: 'dec', label: 'Ex. Déclusion' }
+            edit:
+                fields:
+                    - { property: 'titre', label: 'Titre Design' }
         Comment_Ca_Marche:
             help: 'Cette section permet de modifier la partie COMMENT CA MARCHE du site CYM'
             class: App\Entity\CCM
@@ -114,6 +139,9 @@ easy_admin:
             list:
                 help: 'Dans cette section vous pouvez modifier votre adresse email. Pour changer votre mot de passe contactez Adrien MECHIN : adrien.mechin@gmail.com'
                 title: "Admin des droits d'utilisateur"
+            form:
+                fields:
+                    - email
 
 
 

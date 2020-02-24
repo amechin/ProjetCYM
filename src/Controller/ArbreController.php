@@ -5,12 +5,14 @@ namespace App\Controller;
 use App\Entity\Categorie;
 use App\Entity\Contact;
 use App\Entity\Correspondance;
+use App\Entity\Ressource;
 use App\Form\ContactType;
 use App\Form\CorrespondanceType;
 use App\Form\ParamType;
 use App\Form\SyntheseType;
 use App\Repository\DureeRepository;
 use App\Repository\GroupeRepository;
+use App\Repository\RessourceRepository;
 use App\Service\SupprimerDoublons;
 use App\Service\TitreExercices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -360,7 +362,7 @@ class ArbreController extends AbstractController
     /**
      * @Route("/synthese", name="reunion-synthese")
      */
-    public function synthese(Request $request, DureeRepository $dureeRepository, GroupeRepository $groupeRepository, \Swift_Mailer $mailer)
+    public function synthese(Request $request, DureeRepository $dureeRepository, GroupeRepository $groupeRepository, RessourceRepository $ressourceRepository,\Swift_Mailer $mailer)
     {
         $session = $request->getSession();
         $synthese = $session->get('synthese');
@@ -372,39 +374,60 @@ class ArbreController extends AbstractController
         $ancrage=null;
         $declusion=null;
 
-        foreach ($synthese as $item){
-            foreach ($item as $sousCategorie => $exo){
-                foreach ($exo as $numeroExo => $value){
-                    if($sousCategorie == 1)
-                        $creerChamp .= $numeroExo . '-';
-                    if($sousCategorie==2)
-                        $engagement .= $numeroExo . '-';
-                    if($sousCategorie == 3)
-                        $synergie .= $numeroExo . '-';
-                    if($sousCategorie==4)
-                        $ancrage .= $numeroExo . '-';
-                    if($sousCategorie==5)
-                        $declusion .= $numeroExo . '-';
-                }
-            }
-        }
-        $groupe = $groupeRepository->find($groupeId);
-        $duree= $dureeRepository->find($dureeId);
-
-//        une seule ligne en base et 5 colonnes
-
-        dump('creer le champ'. ' ' . $duree . ' ' . $groupe . ' ' . $creerChamp);
-        dump('engagement'. ' ' . $duree. ' ' . $groupe. ' ' . $engagement);
-        dump('synergie'. ' ' . $duree . ' ' . $groupe. ' ' . $synergie);
-        dump('ancrage'. ' ' . $duree. ' ' . $groupe. ' ' . $ancrage);
-        dump('declusion'. ' ' . $duree. ' ' . $groupe. ' ' . $declusion);
-
-
         $form = $this->createForm(SyntheseType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $titre = $form->getData();
+
+            //on met la synthese en base
+            if(isset($synthese)){
+                foreach ($synthese as $item){
+                    foreach ($item as $sousCategorie => $exo){
+                        foreach ($exo as $numeroExo => $value){
+                            if($sousCategorie == 1)
+                                $creerChamp .= $numeroExo . '-';
+                            if($sousCategorie==2)
+                                $engagement .= $numeroExo . '-';
+                            if($sousCategorie == 3)
+                                $synergie .= $numeroExo . '-';
+                            if($sousCategorie==4)
+                                $ancrage .= $numeroExo . '-';
+                            if($sousCategorie==5)
+                                $declusion .= $numeroExo . '-';
+                        }
+                    }
+                }
+
+                //on enleve le dernier charactere pour chaque ligne d'exercices
+                $creerChamp = rtrim($creerChamp,'-');
+                $engagement = rtrim($engagement,'-');
+                $synergie = rtrim($synergie,'-');
+                $ancrage = rtrim($ancrage,'-');
+                $declusion = rtrim($declusion,'-');
+
+                $groupe = $groupeRepository->find($groupeId);
+                $duree= $dureeRepository->find($dureeId);
+                $data=$form->getData();
+                $titre = $data['titre'];
+                $email = $data['email'];
+
+                $ressource = new Ressource();
+                $ressource->setTitre($titre);
+                $ressource->setDuree($duree);
+                $ressource->setGroupe($groupe);
+                $ressource->setCc($creerChamp);
+                $ressource->setEng($engagement);
+                $ressource->setSyn($synergie);
+                $ressource->setAnc($ancrage);
+                $ressource->setDec($declusion);
+                $ressource->setDesignId($ressourceRepository->findHighestDesignId()+1);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($ressource);
+                $em->flush();
+
+                //fin du isset(synthese)
+            }
 
             $message = (new \Swift_Message(
                 'Vous avez un nouveau message'))

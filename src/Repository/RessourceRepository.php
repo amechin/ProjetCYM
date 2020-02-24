@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Ressource;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
+use phpDocumentor\Reflection\Types\Integer;
 
 /**
  * @method Ressource|null find($id, $lockMode = null, $lockVersion = null)
@@ -17,6 +18,23 @@ class RessourceRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Ressource::class);
+    }
+
+    public function findHighestDesignId():int
+    {
+        $data = $this->createQueryBuilder('r')
+            ->select('MAX(r.designId)')
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getResult()
+            ;
+
+        foreach ($data as $value){
+            foreach ($value as $val){
+                $uniqDesignId = $val;
+            }
+        }
+        return isset($uniqDesignId) ? (int)$uniqDesignId : 0;
     }
 
     // /**
