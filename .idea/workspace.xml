@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_design_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base_notifications.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/contact/email/notifications.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/contact.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/RessourceFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/RessourceFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Boutique.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Boutique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/ancrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/ancrage.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/declusion.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/declusion.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/engagement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/engagement.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/arbre/synergie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/synergie.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-arbre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/boutique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/boutique/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/email/notifications.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact/email/notifications.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +269,7 @@
       <workItem from="1582022299752" duration="4299000" />
       <workItem from="1582038766132" duration="10465000" />
       <workItem from="1582098016977" duration="18683000" />
-      <workItem from="1582182566809" duration="34178000" />
+      <workItem from="1582182566809" duration="34814000" />
     </task>
     <servers />
   </component>

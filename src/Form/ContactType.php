@@ -17,7 +17,7 @@ class ContactType extends AbstractType
             ->add('email')
             ->add('subject')
             ->add('text', TextareaType::class, [
-                'attr' => ['rows' => '7', 'cols' => '50'],
+                'attr' => ['rows' => '5', 'cols' => '50'],
                 'row_attr' => ['class' => 'text-editor']
             ]);
     }
