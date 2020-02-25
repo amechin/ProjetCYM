@@ -7,44 +7,51 @@
 {% endblock %}
 
 {% block body %}
-        {#                    Partie de gauche #}
-        <div class="fleche-boutique-box">
-            <a href="{{ path('boutique-index') }}">
-                <img class="fleche-boutique" src="{{ asset('build/images/panneau_boutique.png') }}" alt="La boutique">
-            </a>
-        </div>
+    {#                    Partie de gauche #}
+    <div class="fleche-boutique-box">
+        <a href="{{ path('boutique-index') }}">
+            <img class="fleche-boutique" src="{{ asset('build/images/panneau_boutique.png') }}" alt="La boutique">
+        </a>
+    </div>
 
-        <div class="fleche-ressources-box">
-            <a href="">
-                <img class="fleche-ressources" src="{{ asset('build/images/panneau_ressource.png') }}"
-                     alt="Les ressources">
-            </a>
-        </div>
+    <div class="fleche-design-box">
+        <a href="">
+            <img class="fleche-ressources" src="{{ asset('build/images/panneau_xp_design.60f524b0.png') }}"
+                 alt="Les ressources">
+        </a>
+    </div>
 
-        {#                            Partie du milieu#}
-        <div class="panneau-box">
-            <img class="panneau" src="{{ asset('build/images/panneau_milieu.png') }}" alt="Panneau central">
-        </div>
+    <div class="fleche-ressources-box">
+        <a href="">
+            <img class="fleche-ressources" src="{{ asset('build/images/panneau_ressource.png') }}"
+                 alt="Les ressources">
+        </a>
+    </div>
+
+    {#                            Partie du milieu#}
+    <div class="panneau-box">
+        <img class="panneau" src="{{ asset('build/images/panneau_milieu.png') }}" alt="Panneau central">
+    </div>
 
 
-        {#                            Partie de droite#}
-        <div class="fleche-parti-box">
-            <a href="{{ path('reunion-parametres') }}">
-                <img class="fleche-parti" src="{{ asset('build/images/panneau_parti.png') }}" alt="Let's go">
-            </a>
-        </div>
+    {#                            Partie de droite#}
+    <div class="fleche-parti-box">
+        <a href="{{ path('reunion-parametres') }}">
+            <img class="fleche-parti" src="{{ asset('build/images/panneau_parti.png') }}" alt="Let's go">
+        </a>
+    </div>
 
-        <div class="fleche-ccm-box">
-            <a href="{{ path('ccm-index') }}">
-                <img class="fleche-ccm" src="{{ asset('build/images/panneau_ccm.png') }}" alt="Comment ça marche">
-            </a>
-        </div>
+    <div class="fleche-ccm-box">
+        <a href="{{ path('ccm-index') }}">
+            <img class="fleche-ccm" src="{{ asset('build/images/panneau_ccm.png') }}" alt="Comment ça marche">
+        </a>
+    </div>
 
 
 {% endblock %}
 {% block footerTitre %}{{ footer.Titre }}{% endblock %}
 {% block footerSousTitre %}{{ footer.Soustitre }}{% endblock %}
-{% block footerDescription%}{{ footer.Description }}{% endblock %}
+{% block footerDescription %}{{ footer.Description }}{% endblock %}
 
 
 

@@ -1,0 +1,51 @@
+{% extends 'base_notifications.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block banner %}
+    <div class="container">
+        <div class="row">
+            <h2>Cook Your Meeting</h2>
+        </div>
+    <div class="row">
+        <div class="sous-titre">
+            <h5>Contact</h5>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Vous avez un nouveau message disponible !</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p> Sujet : {{ contact.subject }} </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p> Envoyé par : {{ contact.name }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p> Adresse email : {{ contact.email }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p> Message : {{ contact.text }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <a href="{{ url('contact_index') }}">lien</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

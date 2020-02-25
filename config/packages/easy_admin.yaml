@@ -116,22 +116,39 @@ easy_admin:
             class: App\Entity\Boutique
             list:
                 title: "Admin Boutique"
-            form:
                 fields:
                     - titre
                     - description
                     - { property: 'image', type: 'file_upload' }
                     - { property: 'image_filename', label: 'Nom du fichier image (avec extension)' }
+                    - lien
+            new:
+                fields:
+                    - titre
+                    - description
+                    - { property: 'image', type: 'file_upload' }
+                    - { property: 'image_filename', label: 'Nom du fichier image (avec extension)' }
+                    - lien
+            edit:
+                fields:
+                    - titre
+                    - description
+                    - lien
         Footer:
             help: 'Cette section permet de modifier les bas de page dans la portion marron'
             class: App\Entity\Footer
+            disabled_actions: ['new', 'delete']
             list:
                 title: "Admin Bas de Page"
-            form:
                 fields:
                     - Page
                     - titre
-                    - { property: 'soustitre', label: 'SousTitre' }
+                    - { property: 'soustitre', label: 'Sous-Titre' }
+                    - description
+            form:
+                fields:
+                    - titre
+                    - { property: 'soustitre', label: 'Sous-Titre' }
                     - description
         Utilisateur:
             class: App\Entity\User

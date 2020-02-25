@@ -36,7 +36,7 @@
                     <div class="text-button" id="text-4">Boutique</div>
                 </div>
                 <div class="collapse d-flex align-items-center">
-                    <a class="button_nav" href="" id="5"></a>
+                    <a class="button_nav" href="{{ path('contact') }}" id="5"></a>
                     <div class="text-button" id="text-5">Contact</div>
                 </div>
                 {% if is_granted('ROLE_ADMIN') %}
@@ -47,8 +47,7 @@
                     </div>
                 {% else %}
                     <div class="collapse d-flex align-items-center">
-                        <a class="button_nav" href="{{ path('app_login') }}" id="7"></a>
-                        <div class="text-button" id="text-7">Connexion</div>
+                        <a class="button_admin" href="{{ path('app_login') }}" id="7"></a>
                     </div>
                 {% endif %}
             </div>

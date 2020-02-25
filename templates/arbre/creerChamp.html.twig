@@ -32,7 +32,9 @@
                 <img src="{{ asset("build/images/mains.png") }}" class="images-gauche-arbre" alt="mains">
             </div>
             <div class="col-12 col-md-4">
-                <p class="text-center texte-arbre">{{ catSelect }}</p>
+                <div class="texte-arbre text-center pt-4">
+                    {{ catSelect }}
+                </div>
             </div>
             <div class="col-12 col-md-4">
                 <img src="{{ asset("build/images/fleur.png") }}" class="images-droite-arbre" alt="fleur">
@@ -58,7 +60,7 @@
         <div class="row sous-categorie-box">
             {% for carte in cartes %}
 
-{#                A modifier#}
+                {#                A modifier#}
                 <a href="{{ path('reunion-creer-champ', {'duree': duree, 'groupe': groupe, 'carte': carte.0}) }}">
                     <div class="btn btn-outline-light texte-sous-categorie mx-4">
                         {{ carte.1 }}

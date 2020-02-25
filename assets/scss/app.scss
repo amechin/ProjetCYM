@@ -14,7 +14,6 @@
 }
 
 
-
 *
 *::after
 *::before {
@@ -134,13 +133,16 @@ a {
   box-shadow: 0 5px 10px rgba(0,0,0,.5);
 }
 
+.button_admin {
+  @include ring(3.5, $yellow);
+}
+
 .text-button{
   color: $brown;
   font-size: 1.9rem;
   font-family: "BebasNeue-Regular";
   height: 2.5rem;
   background-color: $blue;
-  box-shadow: 0 10px 20px rgba(0,0,0,0);
   transform: translate(-1rem, .2rem);
   padding: 0 2rem;
   border-radius: 0 2rem 2rem 0;

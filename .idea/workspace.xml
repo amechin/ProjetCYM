@@ -2,22 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224085715.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200224092546.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_design_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/base_notifications.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact/contact.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact/email/notifications.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RessourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RessourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Ressource.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Ressource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RessourceType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200218101048.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219104403.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migrations/Version20200224085752.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105031.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105431.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219105750.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219114811.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20200219121919.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/RessourceRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/RessourceRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/RessourceFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/RessourceFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Boutique.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Boutique.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/ancrage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/ancrage.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/creerChamp.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/declusion.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/declusion.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/engagement.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/engagement.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/synergie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/synergie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base-arbre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/boutique/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/boutique/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_delete_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/_form.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/edit.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/index.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/new.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,17 +225,17 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/image" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/templates/contact" />
       <recent name="$PROJECT_DIR$/assets/image" />
       <recent name="$PROJECT_DIR$/templates/arbre" />
       <recent name="$PROJECT_DIR$/assets/scss" />
-      <recent name="$PROJECT_DIR$/templates/correspondance" />
-      <recent name="$PROJECT_DIR$/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates" />
@@ -281,7 +300,7 @@
       <workItem from="1582022299752" duration="4299000" />
       <workItem from="1582038766132" duration="10465000" />
       <workItem from="1582098016977" duration="18683000" />
-      <workItem from="1582182566809" duration="23886000" />
+      <workItem from="1582182566809" duration="34178000" />
     </task>
     <servers />
   </component>
@@ -327,11 +346,11 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.819@0.23.1440.819" timestamp="1581611216368" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582197007458">
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582619543002">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580998546188" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582197007458" />
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582619543002" />
     <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1580395616937">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -387,9 +406,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="57" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580995620463" />
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1582534382548">
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1582616715457">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1582534382548" />
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1582616715457" />
   </component>
 </project>

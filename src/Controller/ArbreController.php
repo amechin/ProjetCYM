@@ -10,7 +10,10 @@ use App\Form\ContactType;
 use App\Form\CorrespondanceType;
 use App\Form\ParamType;
 use App\Form\SyntheseType;
+use App\Repository\CategorieRepository;
+use App\Repository\CorrespondanceRepository;
 use App\Repository\DureeRepository;
+use App\Repository\FooterRepository;
 use App\Repository\GroupeRepository;
 use App\Repository\RessourceRepository;
 use App\Service\SupprimerDoublons;
@@ -28,7 +31,7 @@ class ArbreController extends AbstractController
     /**
      * @Route("/", name="reunion-parametres")
      */
-    public function Parametres(SessionInterface $session, Request $request)
+    public function Parametres(SessionInterface $session, Request $request, FooterRepository $footerRepository)
     {
         $session->set('cat', '');
         $session->set('synthese', '');
@@ -42,13 +45,15 @@ class ArbreController extends AbstractController
             $groupe = $data['groupe'];
 
             return $this->redirectToRoute('reunion-creer-champ', [
+                'footer' => $footerRepository->findOneBy(['page' => 'debut_design']),
                 'duree' => $duree->getId(),
                 'groupe' => $groupe->getId()
             ]);
         }
 
         return $this->render('arbre/index.html.twig', [
-            'form' => $form->createView(),
+            'footer' => $footerRepository->findOneBy(['page' => 'debut_design']),
+            'form' => $form->createView()
         ]);
     }
 
@@ -56,9 +61,10 @@ class ArbreController extends AbstractController
     /**
      * @Route("/cc/{duree}/{groupe}/{carte}", name="reunion-creer-champ")
      */
-    public function creerLeChamp(Request $request, int $duree, int $groupe, int $carte = null)
+    public function creerLeChamp(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
-        $catSelect = "Créer le champ";
+        $catSelect = $cr->find(1);
+        dump($catSelect);
         $catSelectId = 1;
         $exercices = null;
         $dataExercices = null;
@@ -117,9 +123,9 @@ class ArbreController extends AbstractController
     /**
      * @Route("/en/{duree}/{groupe}/{carte}", name="reunion-engagement")
      */
-    public function engagement(Request $request, int $duree, int $groupe, int $carte = null)
+    public function engagement(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
-        $catSelect = "Engagement";
+        $catSelect = $cr->find(2);
         $catSelectId = 2;
         $exercices = null;
         $dataExercices = null;
@@ -178,9 +184,9 @@ class ArbreController extends AbstractController
     /**
      * @Route("/sy/{duree}/{groupe}/{carte}", name="reunion-synergie")
      */
-    public function synergie(Request $request, int $duree, int $groupe, int $carte = null)
+    public function synergie(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
-        $catSelect = "Synergie";
+        $catSelect = $cr->find(3);;
         $catSelectId = 3;
         $exercices = null;
         $dataExercices = null;
@@ -239,9 +245,9 @@ class ArbreController extends AbstractController
     /**
      * @Route("/an/{duree}/{groupe}/{carte}", name="reunion-ancrage")
      */
-    public function ancrage(Request $request, int $duree, int $groupe, int $carte = null)
+    public function ancrage(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
-        $catSelect = "Ancrage";
+        $catSelect = $cr->find(4);;
         $catSelectId = 4;
         $exercices = null;
         $dataExercices = null;
@@ -300,9 +306,9 @@ class ArbreController extends AbstractController
     /**
      * @Route("/de/{duree}/{groupe}/{carte}", name="reunion-declusion")
      */
-    public function declusion(Request $request, int $duree, int $groupe, int $carte = null)
+    public function declusion(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
-        $catSelect = "Déclusion";
+        $catSelect = $cr->find(5);;
         $catSelectId = 5;
         $exercices = null;
         $dataExercices = null;

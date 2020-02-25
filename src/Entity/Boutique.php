@@ -36,6 +36,11 @@ class Boutique
      */
     private $image_filename;
 
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    private $lien;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +90,18 @@ class Boutique
     public function setImageFilename(string $image_filename): self
     {
         $this->image_filename = $image_filename;
+
+        return $this;
+    }
+
+    public function getLien(): ?string
+    {
+        return $this->lien;
+    }
+
+    public function setLien(?string $lien): self
+    {
+        $this->lien = $lien;
 
         return $this;
     }

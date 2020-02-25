@@ -23,10 +23,13 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col mt-3 mb-4 d-flex justify-content-center">
-                    <img class="img-fluid boutique-image" src="/uploads/files/{{ article.ImageFilename }}" alt="{{ article.ImageFilename }}    ">
-                </div>
+            <div class="row d-flex justify-content-center">
+                <a href="http://{{ article.lien }}" target="_blank">
+                    <div class="col mt-3 mb-4 d-flex justify-content-center">
+                        <img class="img-fluid boutique-image" src="/uploads/files/{{ article.ImageFilename }}" alt="{{ article.ImageFilename }}    ">
+                    </div>
+                </a>
+
             </div>
         {% endfor %}
     </div>

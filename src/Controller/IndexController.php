@@ -17,8 +17,9 @@ class IndexController extends AbstractController
      */
     public function index(FooterRepository $footerRepository)
     {
-        return $this->render('index/index.html.twig', [
-            'footer' => $footerRepository->findOneBy(['page' => 'accueil'])
-        ]);
+        return $this->render('index/index.html.twig',
+            [
+                'footer' => $footerRepository->findOneBy(['page' => 'accueil'])
+            ]);
     }
 }
