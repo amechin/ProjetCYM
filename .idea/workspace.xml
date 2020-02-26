@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/WikiController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Wiki.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200226075603.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/WikiRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/wiki/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/FooterFixture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/synthese.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/synthese.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CcmController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CcmController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RessourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RessourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-arbre.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-arbre.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base-bootstrap-sans-footer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CarteFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CategorieFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/CorrespondanceFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/CorrespondanceFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/arbre/synthese.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/arbre/synthese.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ccm/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ccm/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +56,14 @@
         <item name="cym.db" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
-        <item name="ccm: table" type="3d80ac25:SqliteImplModel$Table" />
+        <item name="boutique: table" type="3d80ac25:SqliteImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cym.db" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="981a47c2:SqliteImplModel$Schema" />
+        <item name="contact: table" type="3d80ac25:SqliteImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -243,7 +245,47 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@128fc828" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@55dd1fca" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@56bb9943" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4aa9ce92" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@235899c3" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@60dddfd1" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3539f906" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -283,7 +325,7 @@
       <workItem from="1582038766132" duration="10465000" />
       <workItem from="1582098016977" duration="18683000" />
       <workItem from="1582182566809" duration="34903000" />
-      <workItem from="1582703389620" duration="1374000" />
+      <workItem from="1582703389620" duration="4807000" />
     </task>
     <servers />
   </component>
@@ -329,11 +371,11 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="458" y="186" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.819@0.23.1440.819" timestamp="1581611216368" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582703858135">
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582707380461">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="499" y="168" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580998546188" />
-    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582703858135" />
+    <state x="468" y="190" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.819@0.23.1440.819" timestamp="1582707380461" />
     <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1580395616937">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -389,9 +431,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="510" y="57" key="refactoring.ChangeSignatureDialog/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1580995620463" />
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1582616715457">
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup" timestamp="1582705166508">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1582616715457" />
+    <state x="385" y="166" width="670" height="676" key="search.everywhere.popup/0.23.1440.819@0.23.1440.819" timestamp="1582705166508" />
   </component>
 </project>

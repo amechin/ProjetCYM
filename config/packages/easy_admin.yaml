@@ -19,6 +19,8 @@ easy_admin:
             - Boutique
             - { label: 'Gestion Bas de Page'}
             - { entity: 'Footer', label: 'Paramètrage bas de page' }
+            - { label: 'Gestion des Messages'}
+            - { entity: 'Contact', label: 'Messages' }
             - { label: 'Gestion Email Admin'}
             - Utilisateur
     entities:
@@ -172,6 +174,23 @@ easy_admin:
             form:
                 fields:
                     - email
+        Contact:
+            class: App\Entity\Contact
+            disabled_actions: ['new']
+            list:
+                help: 'Dans cette section vous pouvez consulter les messages qui vous ont été envoyés.'
+                title: "Admin des MESSAGES"
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'email', label: 'Email' }
+                    - { property: 'subject', label: 'Sujet' }
+                    - { property: 'text', label: 'Message' }
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom' }
+                    - { property: 'email', label: 'Email' }
+                    - { property: 'subject', label: 'Sujet' }
+                    - { property: 'text', label: 'Message' }
 
 
 

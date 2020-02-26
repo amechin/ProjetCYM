@@ -11,23 +11,23 @@ class CategorieFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $clc = new Categorie();
-        $clc->setNom('Créer le champ');
+        $clc->setNom('Créer un contexte favorable');
         $manager->persist($clc);
 
         $eng = new Categorie();
-        $eng->setNom('Engagement');
+        $eng->setNom('Bâtir autour de l\'intention de rencontre');
         $manager->persist($eng);
 
         $syn = new Categorie();
-        $syn->setNom('Synergie');
+        $syn->setNom('Consolider le travail');
         $manager->persist($syn);
 
         $anc = new Categorie();
-        $anc->setNom('Ancrage');
+        $anc->setNom('Atterrir / Amener la déclusion');
         $manager->persist($anc);
 
         $dec = new Categorie();
-        $dec->setNom('Déclusion');
+        $dec->setNom('Architectures transversales');
         $manager->persist($dec);
 
         $manager->flush();
