@@ -9,6 +9,8 @@ easy_admin:
             - { entity: 'Categorie', label: 'Catégorie' }
             - { entity: 'Sous_Categorie', label: 'Sous_Catégorie' }
             - { entity: 'Parametrage_Arbre', label: 'Paramètrage_Arbre' }
+            - { label: 'Gestion Design'}
+            - Design
             - { label: 'Gestion Ressource'}
             - Ressource
             - { label: 'Gestion Comment ça Marche'}
@@ -82,7 +84,7 @@ easy_admin:
                     - { property: 'categorie', label: 'Catégories' }
                     - { property: 'carte', label: 'Sous-catégories' }
                     - { property: 'ExerciceId', type: 'text', label: 'N° Exercice' }
-        Ressource:
+        Design:
             help: 'Cette section permet d administrer les Designs réalisé sur le site CYM'
             class: App\Entity\Ressource
             disabled_actions: ['new']
@@ -105,6 +107,17 @@ easy_admin:
             class: App\Entity\CCM
             list:
                 title: "Admin Comment ça Marche"
+            form:
+                fields:
+                    - titre
+                    - description
+                    - { property: 'image', type: 'file_upload' }
+                    - { property: 'image_filename', label: 'Nom du fichier image (avec extension)' }
+        Ressource:
+            help: 'Cette section permet de modifier la partie RESSOURCES du site CYM'
+            class: App\Entity\Wiki
+            list:
+                title: "Admin Ressources"
             form:
                 fields:
                     - titre

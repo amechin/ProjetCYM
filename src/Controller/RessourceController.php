@@ -11,19 +11,21 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/ressource")
+ * @Route("/design")
  */
 class RessourceController extends AbstractController
 {
-//    /**
-//     * @Route("/", name="ressource_index", methods={"GET"})
-//     */
-//    public function index(): Response
-//    {
-//        return $this->render('ressource/index.html.twig', [
+    /**
+     * @Route("/", name="design-index", methods={"GET"})
+     */
+    public function index()
+    {
+        return $this->render('ressource/index.html.twig'
+//            [
 //            //'ressources' => $ressourceRepository->findAll(),
-//        ]);
-//    }
+//        ]
+);
+    }
 //
 //    /**
 //     * @Route("/new", name="ressource_new", methods={"GET","POST"})
