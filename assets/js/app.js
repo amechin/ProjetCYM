@@ -16,6 +16,7 @@ require('../scss/boutique.scss');
 require('../scss/arbre.scss');
 require('../scss/ressource.scss');
 require('../scss/ccm.scss');
+require('../scss/pay.scss');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

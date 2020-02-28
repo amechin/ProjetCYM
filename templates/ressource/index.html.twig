@@ -1,43 +1,36 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
 
-{% block title %}Ressource index{% endblock %}
+{% block title %}Designs{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner h-75">
+{% endblock %}
 
 {% block body %}
-    <h1>Ressource index</h1>
+    <div class="row d-flex justify-content-center">
+        <p class="titre-consigne mb-5">Retrouvez dans cette partie l'ensemble des Designs réalisés</p>
+    </div>
+    <div class="row d-flex justify-content-center">
+    {% for ressource in ressources %}
+        <div class="col-5 exercices-col my-3">
+            <a href="{{ path('design-detail', {'id': ressource.id}) }}" style="text-decoration: none">
+                <div class="card exercices">
+                    <div class="card-body">
+                        <div class="row d-flex justify-content-center">
+                            <p class="card-title titre-card-exercice">Design</p>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <p class="card-title titre-card text-center text-uppercase font-weight-bold">{{ ressource.titre }}</p>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <p class="card-title titre-card">Durée: {{ ressource.duree }}</p>
+                            <p class="card-title titre-card">Participants: {{ ressource.groupe }}</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Lien</th>
-                <th>ImageFilename</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for ressource in ressources %}
-            <tr>
-                <td>{{ ressource.id }}</td>
-                <td>{{ ressource.nom }}</td>
-                <td>{{ ressource.description }}</td>
-                <td>{{ ressource.image }}</td>
-                <td>{{ ressource.lien }}</td>
-                <td>{{ ressource.imageFilename }}</td>
-                <td>
-                    <a href="{{ path('ressource_show', {'id': ressource.id}) }}">show</a>
-                    <a href="{{ path('ressource_edit', {'id': ressource.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('ressource_new') }}">Create new</a>
 {% endblock %}

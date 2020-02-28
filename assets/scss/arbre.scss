@@ -107,6 +107,11 @@ input[type="radio"] {
    padding: auto;*/
 }
 
+.titre-consigne {
+  color: $brown !important;
+  font-size: 2rem !important;
+}
+
 .titre-card {
   color: $brown;
   font-size: 1.4rem;
@@ -171,6 +176,16 @@ input[type="radio"] {
   position: absolute;
   top: $banner-box-top + 4.8*10rem;
   min-width: 60rem;
+}
+
+.consigne-design-synthese-box {
+  position: absolute;
+  top: $banner-box-top + 2*10rem;
+}
+
+.design-synthese-box {
+  position: absolute;
+  top: $banner-box-top + 2.5*10rem;
 }
 
 .exercices-col {

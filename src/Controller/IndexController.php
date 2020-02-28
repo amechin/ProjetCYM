@@ -14,6 +14,7 @@ class IndexController extends AbstractController
 {
     /**
      * @Route("/", name="index")
+     * @throws \Stripe\Exception\ApiErrorException
      */
     public function index(FooterRepository $footerRepository)
     {

@@ -1,0 +1,20 @@
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
+
+{% block title %}Designs{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner h-75">
+{% endblock %}
+
+{% block body %}
+    <div class="row d-flex justify-content-center">
+        <p class="titre-consigne mb-5">Retrouvez dans cette partie l'ensemble des Designs réalisés</p>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <ul>
+                <li>{{ ressource.id }}</li>
+                {{ dump(cc) }}
+        </ul>
+    </div>
+
+{% endblock %}
