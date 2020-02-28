@@ -64,7 +64,6 @@ class ArbreController extends AbstractController
     public function creerLeChamp(Request $request, int $duree, int $groupe, int $carte = null, CategorieRepository $cr)
     {
         $catSelect = $cr->find(1);
-        dump($catSelect);
         $catSelectId = 1;
         $exercices = null;
         $dataExercices = null;

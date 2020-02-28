@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scss/pay.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_design_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/files/ccm_ressources_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/PaymentController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/payment/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/ressource/detail.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/cymsymfony5.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cymsymfony5.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/arbre.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/arbre.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/RessourceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RessourceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/_delete_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/_form.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/edit.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ressource/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/new.html.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ressource/show.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Service/TitreExercices.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service/TitreExercices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/ressource/detail.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ressource/detail.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,17 +227,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:cym.db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@4f0e968f" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -299,7 +270,7 @@
       <workItem from="1582703389620" duration="5084000" />
       <workItem from="1582748702355" duration="551000" />
       <workItem from="1582789212772" duration="4117000" />
-      <workItem from="1582876821943" duration="4553000" />
+      <workItem from="1582876821943" duration="8002000" />
     </task>
     <servers />
   </component>

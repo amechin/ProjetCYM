@@ -1,20 +1,137 @@
 {% extends 'base-bootstrap-sans-footer.html.twig' %}
 
-{% block title %}Designs{% endblock %}
+{% block title %}Arbre{% endblock %}
 
 {% block banner %}
     <img src="{{ asset('build/images/banner_accueil.png') }}" alt="banner" class="banner h-75">
 {% endblock %}
 
 {% block body %}
-    <div class="row d-flex justify-content-center">
-        <p class="titre-consigne mb-5">Retrouvez dans cette partie l'ensemble des Designs réalisés</p>
-    </div>
-    <div class="row d-flex justify-content-center">
-        <ul>
-                <li>{{ ressource.id }}</li>
-                {{ dump(cc) }}
-        </ul>
-    </div>
 
+    <div class="container">
+        <div class="row d-flex justify-content-end">
+            <a href="{{ path('design-index') }}" class="btn btn-outline-dark mr-4" style="font-size: 1.4rem">Retour Liste Design</a>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <p class="display-4 mon-design-texte">{{ titreDesign }}</p>
+        </div>
+        <div class="row d-flex justify-content-around mt-3">
+            <h2 class="mon-design-texte">durée : {{ duree }} - participants : {{ groupe }}</h2>
+        </div>
+        {#        creer le champ#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/creerChamp.6b22092e.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for data in cc %}
+                {% for id, titre in data %}
+                    <div class="col-6">
+                        <a href="https://jouer-collectif.com/contenu/{{ id }}" target="_blank"
+                           style="text-decoration: none">
+                            <div class="card exercices-synthese my-1">
+                                <div class="card-body text-center">
+                                    <div class="card-title" style="text-decoration: none">
+                                        {{ titre }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {#        engagement#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/engagement.c9163a35.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for data in eng %}
+                {% for id, titre in data %}
+                    <div class="col-6">
+                        <a href="https://jouer-collectif.com/contenu/{{ id }}" target="_blank"
+                           style="text-decoration: none">
+                            <div class="card exercices-synthese my-1">
+                                <div class="card-body text-center">
+                                    <div class="card-title" style="text-decoration: none">
+                                        {{ titre }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {#        synergie#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/synergie.589e9f63.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for data in syn %}
+                {% for id, titre in data %}
+                    <div class="col-6">
+                        <a href="https://jouer-collectif.com/contenu/{{ id }}" target="_blank"
+                           style="text-decoration: none">
+                            <div class="card exercices-synthese my-1">
+                                <div class="card-body text-center">
+                                    <div class="card-title" style="text-decoration: none">
+                                        {{ titre }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {#        Ancrage#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/ancrage.193b817e.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for data in anc %}
+                {% for id, titre in data %}
+                    <div class="col-6">
+                        <a href="https://jouer-collectif.com/contenu/{{ id }}" target="_blank"
+                           style="text-decoration: none">
+                            <div class="card exercices-synthese my-1">
+                                <div class="card-body text-center">
+                                    <div class="card-title" style="text-decoration: none">
+                                        {{ titre }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {#        declusion#}
+        <div class="row mt-5">
+            <div class="col-2">
+                <img src="{{ asset("build/images/declusion.9b0b7e71.png") }}" class="" alt="drapeau">
+            </div>
+        </div>
+        <div class="row mt-4">
+            {% for data in dec %}
+                {% for id, titre in data %}
+                    <div class="col-6">
+                        <a href="https://jouer-collectif.com/contenu/{{ id }}" target="_blank"
+                           style="text-decoration: none">
+                            <div class="card exercices-synthese my-1">
+                                <div class="card-body text-center">
+                                    <div class="card-title" style="text-decoration: none">
+                                        {{ titre }}</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}

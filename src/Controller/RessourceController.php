@@ -6,6 +6,7 @@ namespace App\Controller;
 //use App\Form\RessourceType;
 //use App\Repository\RessourceRepository;
 use App\Repository\RessourceRepository;
+use App\Service\TitreExercices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -34,13 +35,24 @@ class RessourceController extends AbstractController
     public function designDetail($id, RessourceRepository $ressourceRepository)
     {
         $ressource = $ressourceRepository->find($id);
+        $dashCc = explode('-', $ressource->getCc());
+        $dashEng = explode('-', $ressource->getEng());
+        $dashSyn = explode('-', $ressource->getSyn());
+        $dashAnc = explode('-', $ressource->getAnc());
+        $dashDec = explode('-', $ressource->getDec());
+
+
         return $this->render('ressource/detail.html.twig',
             [
                 'ressource' => $ressource,
-                'titre' =>$ressource->getTitre(),
+                'titreDesign' =>ucfirst($ressource->getTitre()),
                 'duree' =>$ressource->getDuree(),
                 'groupe' =>$ressource->getGroupe(),
-                'cc' =>explode('-', $ressource->getCc())
+                'cc' =>TitreExercices::tableauTitresExercices($dashCc),
+                'eng' =>TitreExercices::tableauTitresExercices($dashEng),
+                'syn' =>TitreExercices::tableauTitresExercices($dashSyn),
+                'anc' =>TitreExercices::tableauTitresExercices($dashAnc),
+                'dec' =>TitreExercices::tableauTitresExercices($dashDec),
             ]
         );
     }
