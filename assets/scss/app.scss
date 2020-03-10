@@ -1,14 +1,12 @@
 @import "vars";
 @import "mixins";
 
-@font-face
-{
+@font-face {
   font-family: 'BebasNeue-Regular';
   src: url('../typo/BebasNeue-Regular.otf');
 }
 
-@font-face
-{
+@font-face {
   font-family: 'Futura';
   src: url('../typo/FuturaExtended.ttf');
 }
@@ -33,7 +31,7 @@ body {
 }
 
 a {
-    color: $brown;
+  color: $brown;
 }
 
 .ecranHaut {
@@ -47,16 +45,16 @@ a {
   border-style: solid;
   border-top-color: white;
   padding-top: 3rem;
-  box-shadow: 0px 0px 10px rgba(0,0,0,1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
 
-.logo-box{
+.logo-box {
   position: absolute;
   top: 2rem;
   right: 1rem;
 }
 
-.logo{
+.logo {
   width: 15rem;
 }
 
@@ -83,17 +81,16 @@ a {
   transform: translate(-50%, -50%);
 }
 
-.banner{
+.banner {
   width: 40rem;
 }
 
-.banner-sm{
+.banner-sm {
   width: 30rem;
 }
 
 
-
-.menu-box{
+.menu-box {
   position: absolute;
   top: 4rem;
   left: 1rem;
@@ -119,25 +116,25 @@ a {
 .button_nav:visited {
   @include ring(3.5, $blue);
   transition: all .2s ease-in-out;
-  box-shadow: 0 5px 4px rgba(0,0,0,.5);
+  box-shadow: 0 5px 4px rgba(0, 0, 0, .5);
   z-index: 1;
 }
 
 .button_nav:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
 }
 
 .button_nav:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
 }
 
 .button_admin {
   @include ring(3.5, $yellow);
 }
 
-.text-button{
+.text-button {
   color: $brown;
   font-size: 1.9rem;
   font-family: "BebasNeue-Regular";
@@ -147,30 +144,30 @@ a {
   padding: 0 2rem;
   border-radius: 0 2rem 2rem 0;
   z-index: 0;
-  box-shadow: 0 10px 20px rgba(0,0,0,.4);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .4);
 }
 
-footer{
+footer {
   background-color: $brown;
 
 }
 
-.separateur1{
+.separateur1 {
   border-bottom: 1px solid white;
 }
 
-.separateur2{
+.separateur2 {
   border-bottom: 1px solid white;
 }
 
-.footer-titre{
+.footer-titre {
   font-family: "BebasNeue-Regular";
   color: $white;
   text-align: center;
   font-size: 2.3rem;
 }
 
-.anatomie{
+.anatomie {
   text-align: center;
   font-family: "BebasNeue-Regular";
   color: $white;
@@ -178,13 +175,13 @@ footer{
   letter-spacing: 1.6rem;
 }
 
-p{
+p {
   margin: 0;
   font-family: "Futura";
   color: $white;
 }
 
-h3{
+h3 {
   font-family: "BebasNeue-Regular";
   color: $brown;
 }
@@ -193,10 +190,10 @@ h3{
   position: absolute;
   bottom: 10rem;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
-.ccby{
+.ccby {
   width: 15rem;
 }
 
@@ -210,31 +207,45 @@ h3{
   width: 4rem;
 }
 
-.text_footer{
-  text-align:justify;
+.text_footer {
+  text-align: justify;
   font-size: 1.4rem;
 }
 
 .remerciement-box {
   position: absolute;
-  bottom: 0rem;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.text-remerciement{
-  text-align:center;
+.text-remerciement {
+  text-align: center;
+  line-height: 2;
   color: $white;
   font-size: 1rem;
 }
 
-.erreur-login-box{
+.erreur-login-box {
   position: absolute;
   top: 5rem;
 }
 
-.form-login-font{
+.form-login-font {
   font-size: 1.6rem;
-  box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
 }
 
+.lien-linkedin {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1.3px transparent solid;
+  transition: all .5s ease-in-out;
+  &:hover{
+    border-bottom-color: white;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+  }
+}
