@@ -17,6 +17,7 @@ require('../scss/arbre.scss');
 require('../scss/ressource.scss');
 require('../scss/ccm.scss');
 require('../scss/pay.scss');
+require('../scss/cgu.scss');
 
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.

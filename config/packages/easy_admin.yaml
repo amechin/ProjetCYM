@@ -3,6 +3,8 @@ easy_admin:
     design:
         brand_color: '#d6a400'
         menu:
+            - { label: 'Gestion des Messages'}
+            - { entity: 'Contact', label: 'Messages' }
             - { label: 'Gestion Arbre' }
             - { entity: 'Duree', label: 'Durée' }
             - Participant
@@ -19,8 +21,8 @@ easy_admin:
             - Boutique
             - { label: 'Gestion Bas de Page'}
             - { entity: 'Footer', label: 'Paramètrage bas de page' }
-            - { label: 'Gestion des Messages'}
-            - { entity: 'Contact', label: 'Messages' }
+            - { label: 'Gestion des CGU'}
+            - { entity: 'Cgu', label: 'CGU' }
             - { label: 'Gestion Email Admin'}
             - Utilisateur
     entities:
@@ -191,6 +193,22 @@ easy_admin:
                     - { property: 'email', label: 'Email' }
                     - { property: 'subject', label: 'Sujet' }
                     - { property: 'text', label: 'Message' }
+        Cgu:
+            help: 'Cette section permet de modifier les Conditions Générales d Utilisation du site'
+            class: App\Entity\Cgu
+            list:
+                title: "Admin CGU"
+                fields:
+                    - titre
+                    - description
+            new:
+                fields:
+                    - titre
+                    - { property: 'description', type: 'textarea' }
+            edit:
+                fields:
+                    - titre
+                    - { property: 'description', type: 'textarea' }
 
 
 

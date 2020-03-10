@@ -1,0 +1,19 @@
+@import "vars";
+@import "mixins";
+
+.cgu-titre-principal {
+  font-size: 3.5rem;
+}
+
+.cgu-titre {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.cgu-description {
+  font-size: 1.8rem;
+  color: $brown;
+  background-color: $yellow-light;
+  padding: 1rem;
+  border-radius: .7rem;
+}

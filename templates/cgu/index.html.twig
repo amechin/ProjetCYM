@@ -1,0 +1,35 @@
+{% extends 'base-bootstrap-sans-footer.html.twig' %}
+
+{% block title %}CGU{% endblock %}
+
+{% block banner %}
+    <img src="{{ asset('build/images/banner_accueil.fb93a565.png') }}" alt="banner" class="banner h-75">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col mt-4">
+                <h3 class="cgu-titre-principal text-center">
+                    Conditions Générales d'Utilisation
+                </h3>
+            </div>
+        </div>
+        {% for article in articles %}
+            <div class="row">
+                <div class="col mt-4">
+                    <h3 class="cgu-titre">
+                        {{ article.titre }}
+                    </h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-5">
+                    <p class="cgu-description text-justify">
+                        {{ article.description }}
+                    </p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
