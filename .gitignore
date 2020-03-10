@@ -21,4 +21,5 @@
 npm-debug.log
 yarn-error.log
 /src/DataFixtures/
+/src/Service/
 ###< symfony/webpack-encore-bundle ###
