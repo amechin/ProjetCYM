@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scss/cgu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CguController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Cgu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200310102057.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/CguRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cgu/index.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/_vars.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/ccm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/ccm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArbreController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArbreController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +269,7 @@
       <workItem from="1582789212772" duration="4117000" />
       <workItem from="1582876821943" duration="8002000" />
       <workItem from="1583739643421" duration="1850000" />
-      <workItem from="1583828231233" duration="5554000" />
+      <workItem from="1583828231233" duration="5777000" />
     </task>
     <servers />
   </component>

@@ -437,7 +437,7 @@ class ArbreController extends AbstractController
             $message = (new \Swift_Message(
                 'Vous avez un nouveau message'))
                 ->setFrom('cook@labocollectif.fr')
-                ->setTo('cook@labocollectif.fr')
+                ->setTo($email)
                 ->setBody($this->renderView(
                     'arbre/mail/notification-synthese.html.twig',
                     [
@@ -448,6 +448,21 @@ class ArbreController extends AbstractController
                     ]),
                     'text/html');;
             $mailer->send($message);
+
+            $messageAdmin = (new \Swift_Message(
+                'Un nouveau Design à été créé'))
+                ->setFrom('cook@labocollectif.fr')
+                ->setTo('cook@labocollectif.fr')
+                ->setBody($this->renderView(
+                    'arbre/mail/notification-synthese.html.twig',
+                    [
+                        'exercices' => $synthese,
+                        'duree' => $dureeRepository->find($dureeId),
+                        'groupe' => $groupeRepository->find($groupeId),
+                        'titre' => $titre
+                    ]),
+                    'text/html');;
+            $mailer->send($messageAdmin);
 
             return $this->redirectToRoute('index');
         }
