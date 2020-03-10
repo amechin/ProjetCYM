@@ -109,5 +109,10 @@ class CarteFixtures extends Fixture
         $carte->setNom("Autre objectif");
         $manager->persist($carte);
         $manager->flush();
+
+        $carte = new Carte;
+        $carte->setNom("Engagement");
+        $manager->persist($carte);
+        $manager->flush();
     }
 }

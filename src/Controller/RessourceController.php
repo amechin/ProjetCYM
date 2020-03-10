@@ -24,7 +24,7 @@ class RessourceController extends AbstractController
     {
         return $this->render('ressource/index.html.twig',
             [
-                'ressources' => $ressourceRepository->findAll(),
+                'ressources' => $ressourceRepository->findAllDesignDateDesc(),
             ]
         );
     }

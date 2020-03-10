@@ -20,17 +20,25 @@ class RessourceRepository extends ServiceEntityRepository
         parent::__construct($registry, Ressource::class);
     }
 
-    public function findHighestDesignId():int
+    public function findAllDesignDateDesc()
+    {
+        return $this->createQueryBuilder('r')
+            ->orderBy('r.id', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
+
+    public function findHighestDesignId(): int
     {
         $data = $this->createQueryBuilder('r')
             ->select('MAX(r.designId)')
             ->setMaxResults(1)
             ->getQuery()
-            ->getResult()
-            ;
+            ->getResult();
 
-        foreach ($data as $value){
-            foreach ($value as $val){
+        foreach ($data as $value) {
+            foreach ($value as $val) {
                 $uniqDesignId = $val;
             }
         }
