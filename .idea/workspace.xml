@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a89429ab-b0a5-4a89-92d8-86e0abca60de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.codekit3" beforeDir="false" afterPath="$PROJECT_DIR$/config.codekit3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +292,7 @@
       <workItem from="1584440672025" duration="72000" />
       <workItem from="1603888423208" duration="499000" />
       <workItem from="1603889038527" duration="696000" />
-      <workItem from="1603997636697" duration="1148000" />
+      <workItem from="1603997636697" duration="1480000" />
     </task>
     <task id="LOCAL-00001" summary="derniere version 29 10 2020">
       <created>1604001444803</created>
@@ -324,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604001760341</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="maj">
+      <created>1604001834882</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604001834882</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,13 +341,14 @@
     <MESSAGE value="Revert &quot;Delete TitreExercices.php&quot;&#10;&#10;This reverts commit 5845250a" />
     <MESSAGE value="Revert &quot;Delete SauvExercices.php&quot;&#10;&#10;This reverts commit b3a96c7e" />
     <MESSAGE value="Revert &quot;Delete UserFixtures.php&quot;&#10;&#10;This reverts commit 8e6bc07b" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Delete UserFixtures.php&quot;&#10;&#10;This reverts commit 8e6bc07b" />
+    <MESSAGE value="maj" />
+    <option name="LAST_COMMIT_MESSAGE" value="maj" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="303" y="23" width="947" height="819" key="CommitChangelistDialog2" timestamp="1604001823632">
+    <state x="303" y="23" width="947" height="819" key="CommitChangelistDialog2" timestamp="1604001834489">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="303" y="23" width="947" height="819" key="CommitChangelistDialog2/0.23.1440.819@0.23.1440.819" timestamp="1604001823632" />
+    <state x="303" y="23" width="947" height="819" key="CommitChangelistDialog2/0.23.1440.819@0.23.1440.819" timestamp="1604001834489" />
     <state x="100" y="123" width="1240" height="619" key="DiffContextDialog" timestamp="1604001807999">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
@@ -351,9 +357,9 @@
       <screen x="0" y="23" width="1440" height="819" />
     </state>
     <state x="497" y="173" key="VcsDiffUtil.ChangesDialog/0.23.1440.819@0.23.1440.819" timestamp="1604001394277" />
-    <state x="503" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604001455084">
+    <state x="503" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604001849392">
       <screen x="0" y="23" width="1440" height="819" />
     </state>
-    <state x="503" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.819@0.23.1440.819" timestamp="1604001455084" />
+    <state x="503" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.819@0.23.1440.819" timestamp="1604001849392" />
   </component>
 </project>
