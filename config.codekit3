@@ -895,6 +895,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/scss\/app.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/scss\/app-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/scss\/app.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -943,6 +953,19 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "\/assets\/scss\/ccm.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/assets\/scss\/cgu.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/scss\/cgu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1384,6 +1407,16 @@
 		"oA": 0,
 		"oAP": "\/phpunit.xml.dist",
 		"oF": 0
+		},
+	"\/public\/build\/app-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/public\/build\/app-min-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/public\/build\/app.css": {
 		"aP": 1,
@@ -5468,6 +5501,13 @@
 		"oAP": "\/src\/Controller\/CcmController.php",
 		"oF": 0
 		},
+	"\/src\/Controller\/CguController.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/src\/Controller\/CguController.php",
+		"oF": 0
+		},
 	"\/src\/Controller\/ContactController.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -5657,6 +5697,13 @@
 		"oAP": "\/src\/Entity\/CCM.php",
 		"oF": 0
 		},
+	"\/src\/Entity\/Cgu.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/src\/Entity\/Cgu.php",
+		"oF": 0
+		},
 	"\/src\/Entity\/Contact.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -5832,6 +5879,13 @@
 		"oAP": "\/src\/Migrations\/Version20200226075603.php",
 		"oF": 0
 		},
+	"\/src\/Migrations\/Version20200310102057.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/src\/Migrations\/Version20200310102057.php",
+		"oF": 0
+		},
 	"\/src\/Repository\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -5865,6 +5919,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/src\/Repository\/CCMRepository.php",
+		"oF": 0
+		},
+	"\/src\/Repository\/CguRepository.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/src\/Repository\/CguRepository.php",
 		"oF": 0
 		},
 	"\/src\/Repository\/ContactRepository.php": {
@@ -6159,6 +6220,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/ccm\/index.html.twig",
+		"oF": 0
+		},
+	"\/templates\/cgu\/index.html.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/cgu\/index.html.twig",
 		"oF": 0
 		},
 	"\/templates\/contact\/contact.html.twig": {
